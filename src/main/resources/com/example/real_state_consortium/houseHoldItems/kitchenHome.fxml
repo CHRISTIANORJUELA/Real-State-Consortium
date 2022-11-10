@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="880.0" style="-fx-background-color: #fffacd;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.KitchenHomeController">
+
+    <children>
+        <AnchorPane prefHeight="750.0" prefWidth="143.0" style="-fx-background-color: #f5f5ea;">
+            <children>
+                <ImageView fitHeight="103.0" fitWidth="143.0" layoutX="7.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="4.0" layoutY="145.0" onMouseClicked="#decorationHome" text="Decoracion del Hogar">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="113.0" fitWidth="126.0" layoutX="13.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="45.0" layoutY="355.0" onMouseClicked="#funny" text="Diversion">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="120.0" fitWidth="135.0" layoutX="7.0" layoutY="468.0" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="40.0" layoutY="647.0" onMouseClicked="#relaxation" text="Relajacion">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label layoutX="446.0" layoutY="22.0" prefHeight="45.0" prefWidth="108.0" text="Cocina">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="163.0" layoutY="80.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;">
+            <children>
+                <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
+                <Label layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="45" />
+                <Label layoutX="77.0" layoutY="204.0" text="Disponible" />
+                <TextField layoutX="63.0" layoutY="227.0" prefHeight="25.0" prefWidth="85.0" />
+                <Label layoutY="231.0" prefHeight="17.0" prefWidth="63.0" text="Comprar" />
+                <Label layoutX="157.0" layoutY="231.0" text="Unidades" />
+                <Button layoutX="74.0" layoutY="263.0" mnemonicParsing="false" onAction="#addElement" text="Comprar" />
+                <Label layoutX="112.0" layoutY="184.0" prefHeight="17.0" prefWidth="50.0" text="Precio:" />
+                <Label layoutX="162.0" layoutY="184.0" text="20000" />
+                <Separator layoutX="6.0" layoutY="220.0" prefWidth="200.0" />
+                <Separator layoutX="103.0" layoutY="182.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="8.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="89.0" layoutY="164.0" prefHeight="17.0" prefWidth="58.0" text="Nomm.." />
+            </children>
+        </AnchorPane>
+        <Separator layoutX="140.0" orientation="VERTICAL" prefHeight="750.0" prefWidth="0.0" style="-fx-background-color: #2c2c2e;" />
+        <AnchorPane layoutX="403.0" layoutY="80.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;">
+            <children>
+                <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
+                <Label layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="20" />
+                <Label layoutX="77.0" layoutY="204.0" text="Disponible" />
+                <TextField layoutX="63.0" layoutY="227.0" prefHeight="25.0" prefWidth="85.0" />
+                <Label layoutY="231.0" prefHeight="17.0" prefWidth="63.0" text="Comprar" />
+                <Label layoutX="157.0" layoutY="231.0" text="Unidades" />
+                <Button layoutX="74.0" layoutY="263.0" mnemonicParsing="false" onAction="#addElement" text="Comprar" />
+                <Label layoutX="112.0" layoutY="184.0" prefHeight="17.0" prefWidth="50.0" text="Precio:" />
+                <Label layoutX="162.0" layoutY="184.0" text="32000" />
+                <Separator layoutX="6.0" layoutY="220.0" prefWidth="200.0" />
+                <Separator layoutX="103.0" layoutY="182.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="85.0" layoutY="164.0" prefHeight="17.0" prefWidth="58.0" text="Nomm.." />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="640.0" layoutY="80.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;">
+            <children>
+                <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
+                <Label layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="30" />
+                <Label layoutX="77.0" layoutY="204.0" text="Disponible" />
+                <TextField layoutX="63.0" layoutY="227.0" prefHeight="25.0" prefWidth="85.0" />
+                <Label layoutY="231.0" prefHeight="17.0" prefWidth="63.0" text="Comprar" />
+                <Label layoutX="157.0" layoutY="231.0" text="Unidades" />
+                <Button layoutX="74.0" layoutY="263.0" mnemonicParsing="false" onAction="#addElement" text="Comprar" />
+                <Label layoutX="112.0" layoutY="184.0" prefHeight="17.0" prefWidth="50.0" text="Precio:" />
+                <Label layoutX="162.0" layoutY="184.0" text="24500" />
+                <Separator layoutX="6.0" layoutY="220.0" prefWidth="200.0" />
+                <Separator layoutX="103.0" layoutY="182.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="8.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="86.0" layoutY="169.0" prefHeight="17.0" prefWidth="58.0" text="Nomm.." />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="163.0" layoutY="405.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;">
+            <children>
+                <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
+                <Label layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="20" />
+                <Label layoutX="77.0" layoutY="204.0" text="Disponible" />
+                <TextField layoutX="63.0" layoutY="227.0" prefHeight="25.0" prefWidth="85.0" />
+                <Label layoutY="231.0" prefHeight="17.0" prefWidth="63.0" text="Comprar" />
+                <Label layoutX="157.0" layoutY="231.0" text="Unidades" />
+                <Button layoutX="74.0" layoutY="263.0" mnemonicParsing="false" onAction="#addElement" text="Comprar" />
+                <Label layoutX="112.0" layoutY="184.0" prefHeight="17.0" prefWidth="50.0" text="Precio:" />
+                <Label layoutX="162.0" layoutY="184.0" text="45000" />
+                <Separator layoutX="6.0" layoutY="220.0" prefWidth="200.0" />
+                <Separator layoutX="103.0" layoutY="182.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="8.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="79.0" layoutY="164.0" prefHeight="17.0" prefWidth="58.0" text="Nomm.." />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="403.0" layoutY="405.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;">
+            <children>
+                <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
+                <Label layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="20" />
+                <Label layoutX="77.0" layoutY="204.0" text="Disponible" />
+                <TextField layoutX="63.0" layoutY="227.0" prefHeight="25.0" prefWidth="85.0" />
+                <Label layoutY="231.0" prefHeight="17.0" prefWidth="63.0" text="Comprar" />
+                <Label layoutX="157.0" layoutY="231.0" text="Unidades" />
+                <Button layoutX="74.0" layoutY="263.0" mnemonicParsing="false" onAction="#addElement" text="Comprar" />
+                <Label layoutX="112.0" layoutY="184.0" prefHeight="17.0" prefWidth="50.0" text="Precio:" />
+                <Label layoutX="162.0" layoutY="184.0" text="49000" />
+                <Separator layoutX="6.0" layoutY="220.0" prefWidth="200.0" />
+                <Separator layoutX="103.0" layoutY="182.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="8.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="80.0" layoutY="164.0" prefHeight="17.0" prefWidth="58.0" text="Nomm.." />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="640.0" layoutY="405.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;">
+            <children>
+                <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
+                <Label layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="20" />
+                <Label layoutX="77.0" layoutY="204.0" text="Disponible" />
+                <TextField layoutX="63.0" layoutY="227.0" prefHeight="25.0" prefWidth="85.0" />
+                <Label layoutY="231.0" prefHeight="17.0" prefWidth="63.0" text="Comprar" />
+                <Label layoutX="157.0" layoutY="231.0" text="Unidades" />
+                <Button layoutX="74.0" layoutY="263.0" mnemonicParsing="false" onAction="#addElement" text="Comprar" />
+                <Label layoutX="112.0" layoutY="184.0" prefHeight="17.0" prefWidth="50.0" text="Precio:" />
+                <Label layoutX="162.0" layoutY="184.0" text="69000" />
+                <Separator layoutX="6.0" layoutY="220.0" prefWidth="200.0" />
+                <Separator layoutX="103.0" layoutY="182.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="9.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="90.0" layoutY="164.0" prefHeight="17.0" prefWidth="58.0" text="Nomm.." />
+            </children>
+        </AnchorPane>
+      <Label layoutX="182.0" layoutY="35.0" onMouseClicked="#goBack" prefHeight="26.0" prefWidth="75.0" text="&lt;-Inicio">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="739.0" layoutY="34.0" onMouseClicked="#watchCar" prefHeight="27.0" prefWidth="126.0" text="Ver Carrito -&gt;">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

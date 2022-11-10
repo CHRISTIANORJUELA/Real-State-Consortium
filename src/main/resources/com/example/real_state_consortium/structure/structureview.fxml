@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="601.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.StructureController">
+   <children>
+      <Label layoutX="191.0" layoutY="51.0" text="Calcular el Precio de la Estructura">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox layoutX="218.0" layoutY="124.0" prefWidth="150.0" />
+      <Label layoutX="36.0" layoutY="128.0" text="Selecciona el tipo de estructura" />
+      <Label layoutX="82.0" layoutY="192.0" text="Cantidad de Pisos" />
+      <TextField layoutX="218.0" layoutY="188.0" />
+      <Label layoutX="84.0" layoutY="265.0" text="Metros de Frente" />
+      <TextField layoutX="217.0" layoutY="261.0" />
+      <Label layoutX="84.0" layoutY="328.0" text="Metros de Fondo" />
+      <TextField layoutX="218.0" layoutY="324.0" />
+      <Label layoutX="108.0" layoutY="393.0" text="Estracto" />
+      <TextField layoutX="218.0" layoutY="389.0" />
+      <TextArea layoutX="74.0" layoutY="464.0" prefHeight="25.0" prefWidth="453.0" />
+      <Label layoutX="74.0" layoutY="447.0" text="Resultado" />
+      <Label layoutX="34.0" layoutY="25.0" onMouseClicked="#goBack" prefHeight="26.0" prefWidth="75.0" text="&lt;-Inicio">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.HelloController">
+
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <AnchorPane prefHeight="602.0" prefWidth="760.0">
+        <children>
+            <Label layoutX="225.0" layoutY="39.0" prefHeight="42.0" prefWidth="368.0" text="Real State Consortium">
+                <font>
+                    <Font name="Cambria Bold" size="33.0" />
+                </font>
+            </Label>
+            <Label layoutX="718.0" layoutY="14.0" onMouseClicked="#enterAtCheckUser" prefHeight="30.0" prefWidth="64.0" text="Entrar">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <Label layoutX="100.0" layoutY="343.0" text="Edificios">
+                <font>
+                    <Font size="19.0" />
+                </font>
+            </Label>
+            <Label layoutX="364.0" layoutY="343.0" text="Mansiones">
+                <font>
+                    <Font size="19.0" />
+                </font>
+            </Label>
+            <Label layoutX="651.0" layoutY="343.0" prefHeight="17.0" prefWidth="49.0" text="Casas">
+                <font>
+                    <Font size="19.0" />
+                </font>
+            </Label>
+         <ImageView fitHeight="114.0" fitWidth="168.0" layoutX="57.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\java\com\example\real_state_consortium\images\edificios.jpg" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="138.0" fitWidth="203.0" layoutX="300.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\java\com\example\real_state_consortium\images\mansiones-4.jpg" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="114.0" fitWidth="149.0" layoutX="593.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\java\com\example\real_state_consortium\images\casa 2.jpg" />
+            </image>
+         </ImageView>
+         <Label layoutX="239.0" layoutY="458.0" onMouseClicked="#watchCatalog" text=" Ver Catalogo">
+            <font>
+               <Font name="System Bold" size="19.0" />
+            </font>
+         </Label>
+         <Label layoutX="455.0" layoutY="459.0" onMouseClicked="#watchCar" text="Ver Carrito">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Label>
+        </children>
+    </AnchorPane>
+</VBox>
