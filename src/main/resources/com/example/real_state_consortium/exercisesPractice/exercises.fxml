@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="695.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.ExercisesPracticeController">
+   <children>
+      <Label layoutX="106.0" layoutY="33.0" prefHeight="27.0" prefWidth="71.0" text="Ejercicio 1">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="404.0" layoutY="38.0" text="Nombre: Maria , Documento: 230" />
+      <Label layoutX="399.0" layoutY="61.0" text="Nombre: Manuel , Documento: 820" />
+      <Label layoutX="398.0" layoutY="85.0" text="Nombre: Camilo , Documento: 1100" />
+      <Label layoutX="401.0" layoutY="110.0" text="Nombre: Pablo , Documento: 4230" />
+      <Label layoutX="6.0" layoutY="69.0" prefHeight="16.0" prefWidth="358.0" text="Buscar por nombre el Primer elemento de la Lista Principal">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfSubString" layoutX="81.0" layoutY="123.0" />
+      <Button layoutX="242.0" layoutY="123.0" mnemonicParsing="false" onAction="#searchSubString" text="Enviar" />
+      <Label layoutX="14.0" layoutY="127.0" text="Subcadena" />
+      <Label layoutX="810.0" layoutY="33.0" prefHeight="27.0" prefWidth="71.0" text="Ejercicio 2">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableName" layoutX="661.0" layoutY="148.0" prefHeight="124.0" prefWidth="345.0">
+        <columns>
+          <TableColumn fx:id="clNamePerson" prefWidth="344.0" text="Nombres" />
+        </columns>
+      </TableView>
+      <Button layoutX="754.0" layoutY="93.0" mnemonicParsing="false" onAction="#changeAtNames" text="Obtener nombres de las Personas" />
+      <TextArea fx:id="textArea" layoutX="30.0" layoutY="210.0" prefHeight="1.0" prefWidth="251.0" />
+      <Label layoutX="134.0" layoutY="179.0" text="Nombre" />
+      <Label layoutX="108.0" layoutY="330.0" text="Ejercicio 3">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="33.0" layoutY="376.0" mnemonicParsing="false" onAction="#sort" text="Ordenar Nombres en Orden Alfabetico" />
+      <Separator layoutX="6.0" layoutY="317.0" prefHeight="4.0" prefWidth="1032.0" />
+      <TableView fx:id="tableSort" layoutX="30.0" layoutY="420.0" prefHeight="159.0" prefWidth="222.0">
+        <columns>
+          <TableColumn fx:id="clNameSort" prefWidth="221.0" text="Nombres" />
+        </columns>
+      </TableView>
+      <Label layoutX="721.0" layoutY="320.0" text="Ejercicio 4">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="447.0" layoutY="4.0" text="Lista Principal">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="502.0" layoutY="368.0" text="Agregar un elemento a un HashMap" />
+      <Label layoutX="497.0" layoutY="404.0" text="Clave" />
+      <Label layoutX="611.0" layoutY="404.0" text="Valor" />
+      <TextField fx:id="tfKeyAdd" layoutX="440.0" layoutY="426.0" prefHeight="25.0" prefWidth="124.0" />
+      <TextField fx:id="tfValueAdd" layoutX="575.0" layoutY="426.0" prefHeight="25.0" prefWidth="99.0" />
+      <Button layoutX="681.0" layoutY="426.0" mnemonicParsing="false" onAction="#addHash" text="Agregar" />
+      <Separator layoutX="427.0" layoutY="320.0" orientation="VERTICAL" prefHeight="374.0" prefWidth="0.0" />
+      <Label layoutX="846.0" layoutY="368.0" text="Eliminar Elemento por Clave" />
+      <TextField fx:id="tfKeyDelete" layoutX="834.0" layoutY="426.0" prefHeight="25.0" prefWidth="124.0" />
+      <Label layoutX="837.0" layoutY="404.0" text="Clave" />
+      <Button layoutX="969.0" layoutY="426.0" mnemonicParsing="false" onAction="#deleteHash" text="Eliminar" />
+      <Label layoutX="693.0" layoutY="517.0" text="Imprimir HashMap en Consola" />
+      <Button layoutX="729.0" layoutY="554.0" mnemonicParsing="false" onAction="#printHash" text="Imprimir" />
+      <Label layoutX="553.0" layoutY="603.0" prefHeight="17.0" prefWidth="441.0" text="NOTA: El HashHMap en los tres Metodos Los quice inicializar con la Lista Principal" />
+      <Label layoutX="64.0" layoutY="85.0" prefHeight="17.0" prefWidth="183.0" text=" que cumpla con la subcadena">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

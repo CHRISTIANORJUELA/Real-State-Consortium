@@ -1,5 +1,7 @@
 package com.example.real_state_consortium;
 
+import com.example.real_state_consortium.utils.ChangeViewGeneral;
+import com.example.real_state_consortium.utils.ChangeViewParticular;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -17,32 +19,18 @@ public class HelloController {
     private Scene scene;
 
     public void watchCatalog(MouseEvent e)  throws IOException{
-        URL url= new File("src/main/resources/com/example/real_state_consortium/houseHoldItems/mainHouseHold.fxml").toURI().toURL();
-        Parent root = FXMLLoader.load(url);
-        Scene scene = new Scene(root);
-        this.stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        this.scene = root.getScene();
-        this.stage.setScene(this.scene);
-        this.stage.show();
+        ChangeViewParticular.watchCatalog(e);
     }
 
     public void enterAtCheckUser(MouseEvent e) throws IOException{
-        URL url = new File("src/main/resources/com/example/real_state_consortium/checkUser/login.fxml").toURI().toURL();
-        Parent root = FXMLLoader.load(url);
-        Scene scene = new Scene(root);
-        this.stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        this.scene = root.getScene();
-        this.stage.setScene(this.scene);
-        this.stage.show();
+        ChangeViewParticular.enterAtCheckUser(e);
     }
 
     public void watchCar(MouseEvent e) throws IOException{
-        URL url = new File("src/main/resources/com/example/real_state_consortium/addCar/addCarView.fxml").toURI().toURL();
-        Parent root = FXMLLoader.load(url);
-        Scene scene = new Scene(root);
-        this.stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        this.scene = root.getScene();
-        this.stage.setScene(this.scene);
-        this.stage.show();
+        ChangeViewGeneral.watchCar(e);
+    }
+
+    public void enterProject(MouseEvent e) throws IOException{
+      ChangeViewParticular.enterProject(e);
     }
 }

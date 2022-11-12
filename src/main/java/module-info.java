@@ -10,10 +10,12 @@ module com.example.real_state_consortium {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires annotations;
 
     opens com.example.real_state_consortium to javafx.fxml;
     exports com.example.real_state_consortium;
     exports com.example.real_state_consortium.controllers;
     opens com.example.real_state_consortium.controllers to javafx.fxml;
-
+    opens com.example.real_state_consortium.models to javafx.base;
+    opens com.example.real_state_consortium.DTOs to javafx.base;
 }

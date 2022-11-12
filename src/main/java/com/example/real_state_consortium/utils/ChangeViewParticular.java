@@ -60,4 +60,34 @@ public class ChangeViewParticular {
         stage.setScene(scene);
         stage.show();
     }
+
+    public static void watchCatalog(MouseEvent e)  throws IOException{
+        URL url= new File("src/main/resources/com/example/real_state_consortium/houseHoldItems/mainHouseHold.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        scene = new Scene(root);
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = root.getScene();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void enterAtCheckUser(MouseEvent e) throws IOException{
+        URL url = new File("src/main/resources/com/example/real_state_consortium/checkUser/login.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        scene = new Scene(root);
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = root.getScene();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void enterProject(MouseEvent e) throws IOException{
+        URL url = new File("src/main/resources/com/example/real_state_consortium/exercisesPractice/exercises.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        scene = new Scene(root);
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = root.getScene();
+        stage.setScene(scene);
+        stage.show();
+    }
 }
