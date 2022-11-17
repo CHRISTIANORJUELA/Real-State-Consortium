@@ -23,50 +23,25 @@
             </Label>
             <Label layoutX="718.0" layoutY="14.0" onMouseClicked="#enterAtCheckUser" prefHeight="30.0" prefWidth="64.0" text="Entrar">
                 <font>
-                    <Font size="18.0" />
+                    <Font name="System Bold" size="18.0" />
                 </font>
             </Label>
-            <Label layoutX="100.0" layoutY="343.0" text="Edificios">
-                <font>
-                    <Font size="19.0" />
-                </font>
-            </Label>
-            <Label layoutX="364.0" layoutY="343.0" text="Mansiones">
-                <font>
-                    <Font size="19.0" />
-                </font>
-            </Label>
-            <Label layoutX="651.0" layoutY="343.0" prefHeight="17.0" prefWidth="49.0" text="Casas">
-                <font>
-                    <Font size="19.0" />
-                </font>
-            </Label>
-         <ImageView fitHeight="114.0" fitWidth="168.0" layoutX="57.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="114.0" fitWidth="168.0" layoutX="122.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\java\com\example\real_state_consortium\images\edificios.jpg" />
             </image>
          </ImageView>
-         <ImageView fitHeight="138.0" fitWidth="203.0" layoutX="300.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="138.0" fitWidth="203.0" layoutX="290.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\java\com\example\real_state_consortium\images\mansiones-4.jpg" />
             </image>
          </ImageView>
-         <ImageView fitHeight="114.0" fitWidth="149.0" layoutX="593.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="114.0" fitWidth="149.0" layoutX="493.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\java\com\example\real_state_consortium\images\casa 2.jpg" />
             </image>
          </ImageView>
-         <Label layoutX="239.0" layoutY="458.0" onMouseClicked="#watchCatalog" text=" Ver Catalogo">
-            <font>
-               <Font name="System Bold" size="19.0" />
-            </font>
-         </Label>
-         <Label layoutX="455.0" layoutY="459.0" onMouseClicked="#watchCar" text="Ver Carrito">
-            <font>
-               <Font name="System Bold" size="18.0" />
-            </font>
-         </Label>
-         <Label layoutX="308.0" layoutY="529.0" onMouseClicked="#enterProject" text="Funciones Practica">
+         <Label layoutX="330.0" layoutY="461.0" onMouseClicked="#watchCatalog" text=" Ver Catalogo">
             <font>
                <Font name="System Bold" size="19.0" />
             </font>

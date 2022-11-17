@@ -4,17 +4,37 @@ import com.example.real_state_consortium.utils.AddElement;
 import com.example.real_state_consortium.utils.BarCollectionPrincipal1;
 import com.example.real_state_consortium.utils.ChangeViewGeneral;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import java.io.IOException;
 
 
 public class ToiletHomeController implements BarCollectionPrincipal1, AddElement {
+
+    @FXML
+    Label lbUnits;
+
+    @FXML
+    Label lbDisponibility;
+
+    @FXML
+    TextField tfEnterStock;
+
+    @FXML
+    Label lbPrice;
+
+    @FXML
+    Label lbNameProduct;
+
+    ModelFactoryController mfc = ModelFactoryController.getInstance();
     public void addElement(ActionEvent e){
         Button button = (Button) e.getTarget();
-        Object tfUnits = button.getParent().getChildrenUnmodifiable();
-        System.out.println(tfUnits.toString());
+        StartElementsOfController.firstStep(mfc,button);
     }
+
 
 
     public void watchCar(MouseEvent e) throws IOException{

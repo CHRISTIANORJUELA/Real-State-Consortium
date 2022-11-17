@@ -16,6 +16,10 @@ public class FloorHomeController implements BarCollectionPrincipal1, AddElement 
         System.out.println(tfUnits.toString());
     }
 
+    public void loadCar(Button button){
+
+    }
+
 
     public void watchCar(MouseEvent e) throws IOException{
         ChangeViewGeneral.watchCar(e);

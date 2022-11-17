@@ -18,4 +18,5 @@ module com.example.real_state_consortium {
     opens com.example.real_state_consortium.controllers to javafx.fxml;
     opens com.example.real_state_consortium.models to javafx.base;
     opens com.example.real_state_consortium.DTOs to javafx.base;
+    opens com.example.real_state_consortium.utils to javafx.base;
 }

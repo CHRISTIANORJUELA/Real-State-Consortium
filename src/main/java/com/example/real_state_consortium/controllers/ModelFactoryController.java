@@ -1,9 +1,15 @@
 package com.example.real_state_consortium.controllers;
 
 import com.example.real_state_consortium.DTOs.Name;
+import com.example.real_state_consortium.models.Structure;
+import com.example.real_state_consortium.utils.Data3;
+import com.example.real_state_consortium.utils.DataElements;
+import com.example.real_state_consortium.utils.ElementsOfView;
 import com.example.real_state_consortium.services.Impl.Laboratory;
 import com.example.real_state_consortium.services.ModelFactoryService;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,4 +62,47 @@ public class ModelFactoryController implements ModelFactoryService {
     public void printHash(){
         laboratory.getExercisesPracticeImpl().printHash();
     }
+
+    //************************REAL STATE CONSORTIUM****************************************************************
+
+    public void addElementCar(Label lbUnits, Label lbDisponibility, TextField tfEnterStock, Label lbPrice, Label lbNameProduct){
+         laboratory.getPaintServiceImpl().addElementCar(lbUnits,lbDisponibility,tfEnterStock,lbPrice,lbNameProduct);
+    }
+
+    public void addElementInCar(ModelFactoryController mfc ,String btn , String lbUnits, String lbDisponibility, String tfEnterStock, String lbPrice, String lbNameProduct){
+        laboratory.getAddAtCarImpl().addElementInCar(mfc,btn ,lbUnits,lbDisponibility,tfEnterStock,lbPrice,lbNameProduct);
+    }
+
+    public ArrayList<DataElements> returnDataPaint(){
+        return laboratory.getPaintServiceImpl().initializeDataPaint();
+    }
+
+    public ArrayList<DataElements> returnDataToilet(){
+        return laboratory.getToiletServiceImpl().initializeDataToilet();
+    }
+
+    public  ArrayList<ElementsOfView> getElementsInTheView(){
+        return laboratory.getCarServiceImpl().getElementsInTheView();
+    }
+
+    public void calculateStructure( ModelFactoryController mfc,float metersBackground,float meterFront,int floors,int extract,String stucture){
+        laboratory.getStructureServiceImpl().calculateStructure(mfc,metersBackground,meterFront,floors,extract,stucture);
+    }
+
+    public void deleteStructureFalse(){
+        laboratory.getStructureServiceImpl().deleteStructureFalse();
+    }
+
+    public ArrayList<Data3> getListAllElementsCar(){
+     return laboratory.getCarServiceImpl().getListAllElementsCar();
+    }
+
+    public List<Structure> getStructures(){
+        return laboratory.getStructureServiceImpl().getStructures();
+    }
+
+    public Structure getStructureClass(){
+        return laboratory.getStructureServiceImpl().getStructureClass();
+    }
+
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
@@ -7,27 +8,36 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="601.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.StructureController">
+<AnchorPane prefHeight="750.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.StructureController">
    <children>
-      <Label layoutX="191.0" layoutY="51.0" text="Calcular el Precio de la Estructura">
+      <Label layoutX="32.0" layoutY="25.0" onMouseClicked="#goBack" prefHeight="26.0" prefWidth="75.0" text="&lt;-Inicio">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="218.0" layoutY="124.0" prefWidth="150.0" />
-      <Label layoutX="36.0" layoutY="128.0" text="Selecciona el tipo de estructura" />
-      <Label layoutX="82.0" layoutY="192.0" text="Cantidad de Pisos" />
-      <TextField layoutX="218.0" layoutY="188.0" />
-      <Label layoutX="84.0" layoutY="265.0" text="Metros de Frente" />
-      <TextField layoutX="217.0" layoutY="261.0" />
-      <Label layoutX="84.0" layoutY="328.0" text="Metros de Fondo" />
-      <TextField layoutX="218.0" layoutY="324.0" />
-      <Label layoutX="108.0" layoutY="393.0" text="Estracto" />
-      <TextField layoutX="218.0" layoutY="389.0" />
-      <TextArea layoutX="74.0" layoutY="464.0" prefHeight="25.0" prefWidth="453.0" />
-      <Label layoutX="74.0" layoutY="447.0" text="Resultado" />
-      <Label layoutX="34.0" layoutY="25.0" onMouseClicked="#goBack" prefHeight="26.0" prefWidth="75.0" text="&lt;-Inicio">
+      <AnchorPane layoutX="120.0" layoutY="22.0" prefHeight="707.0" prefWidth="564.0">
+         <children>
+            <Label layoutX="157.0" layoutY="40.0" text="Calcular el Precio de la Estructura">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="chStructure" layoutX="233.0" layoutY="103.0" prefWidth="150.0" />
+            <Label layoutX="31.0" layoutY="107.0" text="Selecciona el tipo de estructura" />
+            <ChoiceBox fx:id="chFloors" layoutX="233.0" layoutY="158.0" prefWidth="150.0" />
+            <Label layoutX="89.0" layoutY="162.0" text="Cantidad de Pisos" />
+            <TextField fx:id="tfMetersFront" layoutX="234.0" layoutY="229.0" />
+            <Label layoutX="104.0" layoutY="233.0" text="Metros de Frente" />
+            <TextField fx:id="tfMetersBackground" layoutX="234.0" layoutY="285.0" />
+            <Label layoutX="90.0" layoutY="289.0" text="Metros de Fondo" />
+            <ChoiceBox fx:id="chExtract" layoutX="233.0" layoutY="338.0" prefWidth="150.0" />
+            <Label layoutX="136.0" layoutY="342.0" text="Estracto" />
+            <Button layoutX="256.0" layoutY="407.0" mnemonicParsing="false" onAction="#calculateItems" text="Calcular Compra" />
+            <TextArea fx:id="textArea" layoutX="69.0" layoutY="479.0" prefHeight="147.0" prefWidth="453.0" />
+            <Label layoutX="69.0" layoutY="449.0" text="Valor a Pagar" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="finallySell" layoutX="691.0" layoutY="25.0" text="finalizar la Compra -&gt;">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>

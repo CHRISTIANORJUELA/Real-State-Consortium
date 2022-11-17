@@ -6,13 +6,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="585.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.AddCarController">
+<AnchorPane prefHeight="585.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.CarController">
    <children>
-      <TableView layoutY="314.0" prefHeight="272.0" prefWidth="803.0">
+      <TableView fx:id="tableCar" layoutY="314.0" prefHeight="272.0" prefWidth="803.0">
         <columns>
-          <TableColumn prefWidth="237.0" text="Nombre" />
-          <TableColumn prefWidth="224.0" text="Cantidad" />
-            <TableColumn prefWidth="307.0" text="Compra" />
+          <TableColumn fx:id="clName" prefWidth="237.0" text="Nombre" />
+          <TableColumn fx:id="clStock" prefWidth="224.0" text="Cantidad" />
+            <TableColumn prefWidth="341.0" text="Compra" />
         </columns>
       </TableView>
       <Label layoutX="359.0" layoutY="80.0" text="Carrito">
