@@ -52,7 +52,7 @@ public class ChangeViewParticular {
         stage.show();
     }
 
-    public static void continueWithBuy(MouseEvent e) throws IOException{
+    public static void quoteProperty(MouseEvent e) throws IOException{
         URL url= new File("src/main/resources/com/example/real_state_consortium/structure/structureview.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         scene = new Scene(root);
@@ -72,10 +72,11 @@ public class ChangeViewParticular {
         stage.show();
     }
 
-    public static void enterAtCheckUser(MouseEvent e) throws IOException{
-        URL url = new File("src/main/resources/com/example/real_state_consortium/checkUser/login.fxml").toURI().toURL();
+    public static void enterAtLogin(MouseEvent e) throws IOException{
+        URL url = new File("src/main/resources/com/example/real_state_consortium/ValidateAgent/login.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         scene = new Scene(root);
+        scene.getStylesheets().add(ChangeViewParticular.class.getResource("./css/loginStyle.css").toExternalForm());
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = root.getScene();
         stage.setScene(scene);
@@ -92,10 +93,40 @@ public class ChangeViewParticular {
         stage.show();
     }
 
-    public static void finallySell(ActionEvent e)throws IOException{
-        URL url = new File("src/main/resources/com/example/real_state_consortium/exercisesPractice/exercises.fxml").toURI().toURL();
+    public static void finallySell(MouseEvent e)throws IOException{
+        URL url = new File("src/main/resources/com/example/real_state_consortium/finallySell/finallySellView.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         scene = new Scene(root);
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = root.getScene();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void sendMainPerson(ActionEvent e) throws IOException{
+        URL url = new File("src/main/resources/com/example/real_state_consortium/Person/MainPerson.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        scene = new Scene(root);
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = root.getScene();
+        stage.setScene(scene);
+        stage.show();
+    }
+    public static void seeAgentsCrud(MouseEvent e) throws IOException{
+        URL url = new File("src/main/resources/com/example/real_state_consortium/Person/Agent.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        scene = new Scene(root);
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = root.getScene();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void enterAtLoginWithActioEvent(ActionEvent e) throws IOException {
+        URL url = new File("src/main/resources/com/example/real_state_consortium/ValidateAgent/login.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        scene = new Scene(root);
+        //scene.getStylesheets().add("../css/loginStyle.css");
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = root.getScene();
         stage.setScene(scene);

@@ -11,11 +11,9 @@ public class StructureServiceImpl implements StructureService {
    final int pricePerFloor = 50000;
    final short pricePerExtract = 30000;
    float totalPriceOfStructure = 0;
-
    Structure structureClass;
    List<Structure> structures;
    public void calculateStructure(ModelFactoryController mfc, float metersBackground, float meterFront, int floors, int extract, String stucture){
-      System.out.println("entro");
       if (structures==null){structures=new ArrayList<>();}
       if (structureClass==null){structureClass = new Structure();}
       if (structureClass.getTypeStructure()!=null){structureClass=null;}
@@ -32,15 +30,16 @@ public class StructureServiceImpl implements StructureService {
       }
       totalPriceOfStructure = totalPriceExtract+totalPriceMeter2+totalPriceFloor+totalPriceTypeStructure;
       structureClass = new Structure(stucture,floors,meterFront,metersBackground,extract,metersSquare,totalPriceMeter2,totalPriceOfStructure);
-      structures.add(new Structure(stucture,floors,meterFront,metersBackground,extract,metersSquare,totalPriceMeter2,totalPriceOfStructure));
    }
    public void deleteStructureFalse(){
-      for (int i=0;i<structures.size();i++){
-         if (!structures.get(i).getStructureWasSell()){removeStructure(structures,i);}}
+      structureClass = null;
    }
-   public void removeStructure(List<Structure> structures,int i){structures.remove(i);}
 
    public List<Structure> getStructures(){return structures;}
 
    public Structure getStructureClass(){return structureClass;}
+
+   public void setNullStructureClassObject(){
+      structureClass = null;
+   }
 }

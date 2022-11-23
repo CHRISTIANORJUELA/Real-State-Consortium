@@ -6,12 +6,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="570.0" prefWidth="753.0" style="-fx-background-color: #EEEDED;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.LoginController">
+<AnchorPane id="tfName" prefHeight="750.0" prefWidth="880.0" stylesheets="@../css/loginStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.LoginController">
    <children>
       <AnchorPane layoutX="241.0" layoutY="101.0" prefHeight="369.0" prefWidth="310.0" style="-fx-background-color: #faa61e;">
          <children>
-            <TextField layoutX="75.0" layoutY="95.0" />
-            <TextField layoutX="75.0" layoutY="181.0" />
+            <TextField fx:id="tfName" layoutX="75.0" layoutY="95.0" />
+            <TextField fx:id="tfPassword" layoutX="75.0" layoutY="181.0" />
             <Label layoutX="75.0" layoutY="70.0" text="Nombre" />
             <Label layoutX="75.0" layoutY="164.0" text="Contraseña" />
             <Label layoutX="93.0" layoutY="14.0" text="Iniciar Sesión">

@@ -14,4 +14,6 @@ public interface StructureService {
 
     Structure getStructureClass();
 
+    void setNullStructureClassObject();
+
 }

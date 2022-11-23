@@ -2,12 +2,10 @@ package com.example.real_state_consortium.controllers;
 
 import com.example.real_state_consortium.utils.*;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class PaintHomeController implements BarCollectionPrincipal1, AddElement {
 
@@ -17,16 +15,6 @@ public class PaintHomeController implements BarCollectionPrincipal1, AddElement 
     // Position 3: TfNumber;
     //position 8: Price
     // position 12: nameProduct
-
-    @FXML
-    Label lbUnits;
-    Label lbDisponibility;
-
-    TextField tfEnterStock;
-
-    Label lbPrice;
-
-    Label lbNameProduct;
 
     ModelFactoryController mfc = ModelFactoryController.getInstance();
 
@@ -90,9 +78,10 @@ public class PaintHomeController implements BarCollectionPrincipal1, AddElement 
     }
 
 
-    /*System.out.println("Unidades "+lbUnits.getText()+" disponibilidad "+lbDisponibility.getText()+
-                " precio "+lbPrice.getText()+ " nombre del producto "+lbNameProduct.getText()
-                );
-         */
+
+    public void print(ActionEvent e){
+        ArrayList<ElementsOfView> el = mfc.getElementsInTheView();
+        el.forEach(x-> System.out.println("Nombre "+x.getNameView().getText()+" cantidad : "+x.getStockInView().getText()));
+    }
 
 }

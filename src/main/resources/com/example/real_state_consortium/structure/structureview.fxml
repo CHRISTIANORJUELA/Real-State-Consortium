@@ -37,7 +37,7 @@
             <Label layoutX="69.0" layoutY="449.0" text="Valor a Pagar" />
          </children>
       </AnchorPane>
-      <Label fx:id="finallySell" layoutX="691.0" layoutY="25.0" text="finalizar la Compra -&gt;">
+      <Label layoutX="691.0" layoutY="25.0" onMouseClicked="#finallySell" text="finalizar la Compra -&gt;">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>

@@ -10,8 +10,8 @@
     <children>
         <AnchorPane layoutX="241.0" layoutY="93.0" prefHeight="369.0" prefWidth="310.0" style="-fx-background-color: #faa61e;">
             <children>
-                <TextField layoutX="75.0" layoutY="118.0" />
-                <TextField layoutX="75.0" layoutY="221.0" />
+                <TextField fx:id="tfName" layoutX="75.0" layoutY="118.0" />
+                <TextField fx:id="tfPassword" layoutX="75.0" layoutY="221.0" />
                 <Label layoutX="75.0" layoutY="95.0" text="Nombre" />
                 <Label layoutX="75.0" layoutY="197.0" text="Contraseña" />
                 <Label layoutX="112.0" layoutY="26.0" text="Registrarse">

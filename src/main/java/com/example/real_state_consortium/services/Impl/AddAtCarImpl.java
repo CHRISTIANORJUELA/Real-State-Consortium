@@ -4,6 +4,9 @@ import com.example.real_state_consortium.controllers.ModelFactoryController;
 import com.example.real_state_consortium.utils.Data3;
 import com.example.real_state_consortium.utils.DataElements;
 import com.example.real_state_consortium.services.AddAtCarService;
+import com.example.real_state_consortium.utils.PrintMessage;
+import javafx.event.ActionEvent;
+
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -24,7 +27,6 @@ public class AddAtCarImpl implements AddAtCarService {
                 double stockPush = calculateStockPush((String) map.getKey(),(double) map.getValue());
                 setData3Send((String) map.getKey(),(double) map.getValue(), stockPush);
             }
-            data3send.forEach(x-> System.out.println("Nombre "+x.getNameElement()+" cantidad "+x.getStockElement()+" valor "+x.getValue()));
             checkElementsExistsInArrayCar(mfc,data3send);
             map1.clear();
     }
@@ -38,7 +40,6 @@ public class AddAtCarImpl implements AddAtCarService {
         }
         return elements;
     }
-
     public void setData3Send(String name,double totalValue, double stockPush){
         boolean pass = data3send.stream().anyMatch(x-> x.getNameElement().equalsIgnoreCase(name));
         if (pass){
@@ -52,7 +53,6 @@ public class AddAtCarImpl implements AddAtCarService {
             data3send.add(new Data3(name,(int) Math.round(stockPush), totalValue));
         }
     }
-
     public void checkElementsExistsInArrayCar(ModelFactoryController mfc,ArrayList<Data3> data3send){
         ArrayList<Data3> elementsInCar = mfc.getListAllElementsCar();
         for (Data3 d:data3send){
@@ -61,7 +61,8 @@ public class AddAtCarImpl implements AddAtCarService {
                 elementsInCar.forEach(x->{
                     if (x.getNameElement().equalsIgnoreCase(d.getNameElement())){
                         x.setStockElement(d.getStockElement());
-                        x.setValue(x.getValue());
+                        x.setValue(d.getValue());
+                        PrintMessage.printMessage("Atención",x.getNameElement()+" Ha sido Agregado");
                     }
                 });
             }else {
@@ -81,6 +82,15 @@ public class AddAtCarImpl implements AddAtCarService {
         }
         if (data3send==null){
             data3send = new ArrayList<>();
+        }
+    }
+
+    public void clearData(){
+        if (data3 != null){
+            data3.clear();
+        }
+        if (data3send != null){
+            data3send.clear();
         }
     }
 

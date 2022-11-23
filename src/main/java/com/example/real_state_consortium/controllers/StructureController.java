@@ -3,6 +3,7 @@ package com.example.real_state_consortium.controllers;
 import com.example.real_state_consortium.models.Structure;
 import com.example.real_state_consortium.utils.ChangeViewGeneral;
 import com.example.real_state_consortium.utils.ChangeViewParticular;
+import com.example.real_state_consortium.utils.UtilsMethods1;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -41,7 +42,7 @@ public class StructureController implements Initializable {
     private ArrayList<Integer> numsChFloors = new ArrayList<>();
 
 
-    private ArrayList<String> nameStructures = new ArrayList<String>(List.of(new String[]{"Mansión", "Edificio", "Casa"}));
+    private ArrayList<String> nameStructures = new ArrayList<>(List.of(new String[]{"Mansión", "Edificio", "Casa"}));
 
     private ArrayList<Integer> extractStructure = new ArrayList<>();
 
@@ -61,16 +62,17 @@ public class StructureController implements Initializable {
 
     public void calculateItems(ActionEvent e){
         if (tfMetersBackground.getText() != null && tfMetersFront.getText() != null && chFloors.getValue() != null && chExtract.getValue() != null && chStructure.getValue() != null){
-            int metersBackground = Integer.parseInt(tfMetersBackground.getText());
-            int meterFront = Integer.parseInt(tfMetersFront.getText());
-            int floors = chFloors.getValue();
-            int extract = chExtract.getValue();
-            String stucture = chStructure.getValue();
-            mfc.calculateStructure(mfc,metersBackground,meterFront,floors,extract,stucture);
-            printInTextArea();
+            if (UtilsMethods1.validateIscampusNumberIsTrue(tfMetersBackground.getText()) && UtilsMethods1.validateIscampusNumberIsTrue(tfMetersFront.getText())){
+                int metersBackground = Integer.parseInt(tfMetersBackground.getText());
+                int meterFront = Integer.parseInt(tfMetersFront.getText());
+                int floors = chFloors.getValue();
+                int extract = chExtract.getValue();
+                String stucture = chStructure.getValue();
+                mfc.calculateStructure(mfc,metersBackground,meterFront,floors,extract,stucture);
+                printInTextArea();
+            }
         }
     }
-
     public void printInTextArea(){
         textArea.setText("");
         this.structureClass = mfc.getStructureClass();
@@ -86,13 +88,10 @@ public class StructureController implements Initializable {
         textArea.setText(message);
     }
 
-
     public void goBack(MouseEvent e) throws IOException {
-        mfc.deleteStructureFalse();
         ChangeViewGeneral.goBack(e);
     }
-
-    public void finallySell(ActionEvent e)throws IOException{
+    public void finallySell(MouseEvent e)throws IOException{
         ChangeViewParticular.finallySell(e);
     }
 

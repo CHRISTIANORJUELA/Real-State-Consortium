@@ -1,10 +1,10 @@
 package com.example.real_state_consortium.models;
 
-public class CheckUser {
+public class ValidateAgent {
     private String nameAgent;
     private String code;
 
-    public CheckUser(String nameAgent, String code) {
+    public ValidateAgent(String nameAgent, String code) {
         this.nameAgent = nameAgent;
         this.code = code;
     }

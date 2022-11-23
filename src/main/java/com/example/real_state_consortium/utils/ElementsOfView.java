@@ -39,16 +39,16 @@ public class ElementsOfView {
         return disponiblilityView;
     }
 
-    public void setDisponiblilityView(Label disponiblilityView) {
-        this.disponiblilityView = disponiblilityView;
+    public void setDisponiblilityView(String disponiblilityView) {
+        this.disponiblilityView.setText(disponiblilityView);
     }
 
     public Label getStockInView() {
         return stockInView;
     }
 
-    public void setStockInView(Label stockInView) {
-        this.stockInView = stockInView;
+    public void setStockInView(String stockInView) {
+        this.stockInView.setText(stockInView);
     }
 
     public Label getPriceIntheView() {

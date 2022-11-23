@@ -5,9 +5,9 @@ import com.example.real_state_consortium.utils.UtilsMethods1;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
 public class StartElementsOfController {
-
     static Label lbUnits;
     static Label lbDisponibility;
     static TextField tfEnterStock;
@@ -15,7 +15,7 @@ public class StartElementsOfController {
     static Label lbNameProduct;
     public static void firstStep(ModelFactoryController mfc,Button button){
         loadCar(button);
-        if (UtilsMethods1.validateFirstEnter(tfEnterStock)){
+        if (UtilsMethods1.validateIscampusNumberIsTrue(tfEnterStock.getText())){
             String idBtn = button.getId();
             String units = lbUnits.getText();
             String disponibility = lbDisponibility.getText();
@@ -28,14 +28,14 @@ public class StartElementsOfController {
             }
     }
 }
-
    public static void loadCar(Button button){
-    lbUnits = (Label) button.getParent().getChildrenUnmodifiable().get(1);
+    AnchorPane an = (AnchorPane) button.getParent();
+    //lbUnits = (Label) button.getParent().getChildrenUnmodifiable().get(1);
+    lbUnits = (Label) an.getChildren().get(1);
     lbDisponibility = (Label) button.getParent().getChildrenUnmodifiable().get(2);
     tfEnterStock = (TextField) button.getParent().getChildrenUnmodifiable().get(3);
     lbPrice = (Label) button.getParent().getChildrenUnmodifiable().get(7);
     lbNameProduct = (Label) button.getParent().getChildrenUnmodifiable().get(11);
-
     }
 
 

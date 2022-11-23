@@ -68,7 +68,7 @@ public class ChangeViewGeneral {
     }
 
     public static void enterRegister(MouseEvent e) throws IOException{
-        URL url= new File("src/main/resources/com/example/real_state_consortium/checkUser/register.fxml").toURI().toURL();
+        URL url= new File("src/main/resources/com/example/real_state_consortium/ValidateAgent/register.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         Scene scene = new Scene(root);
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();

@@ -22,15 +22,11 @@ public class HelloController {
         ChangeViewParticular.watchCatalog(e);
     }
 
-    public void enterAtCheckUser(MouseEvent e) throws IOException{
-        ChangeViewParticular.enterAtCheckUser(e);
+    public void enterAtLogin(MouseEvent e) throws IOException{
+        ChangeViewParticular.enterAtLogin(e);
     }
 
-    public void watchCar(MouseEvent e) throws IOException{
-        ChangeViewGeneral.watchCar(e);
-    }
-
-    public void enterProject(MouseEvent e) throws IOException{
-      ChangeViewParticular.enterProject(e);
+    public void quoteProperty(MouseEvent e) throws IOException{
+        ChangeViewParticular.quoteProperty(e);
     }
 }
