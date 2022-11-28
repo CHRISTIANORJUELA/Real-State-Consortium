@@ -51,6 +51,11 @@
                <Font name="System Bold" size="19.0" />
             </font>
          </Label>
+         <Label layoutX="290.0" layoutY="520.0" onMouseClicked="#enterThreadView" text="Ejercicios de Hilos">
+            <font>
+               <Font name="System Bold" size="19.0" />
+            </font>
+         </Label>
         </children>
     </AnchorPane>
 </VBox>

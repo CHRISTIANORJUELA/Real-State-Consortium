@@ -43,7 +43,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="163.0" layoutY="80.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;">
+      <AnchorPane layoutX="163.0" layoutY="80.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #FFFFFF;">
          <children>
             <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
             <Label layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="20" />
@@ -59,23 +59,7 @@
             <Label layoutX="69.0" layoutY="164.0" prefHeight="17.0" prefWidth="75.0" text="Amarillo Piña" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="403.0" layoutY="80.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;">
-         <children>
-            <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
-            <Label layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="30" />
-            <Label layoutX="77.0" layoutY="204.0" text="Disponible" />
-            <TextField layoutX="63.0" layoutY="227.0" prefHeight="25.0" prefWidth="85.0" />
-            <Button fx:id="idPaint" layoutX="74.0" layoutY="263.0" mnemonicParsing="false" onAction="#addElement" text="Comprar" />
-            <Label layoutX="112.0" layoutY="184.0" prefHeight="17.0" prefWidth="50.0" text="Precio:" />
-            <Label layoutX="162.0" layoutY="184.0" text="4200" />
-            <Separator layoutX="6.0" layoutY="220.0" prefWidth="200.0" />
-            <Separator layoutX="103.0" layoutY="182.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-            <Label layoutX="85.0" layoutY="164.0" prefHeight="17.0" prefWidth="58.0" text="Pintura 2" />
-            <Label layoutX="6.0" layoutY="231.0" prefHeight="17.0" prefWidth="63.0" text="Unidades" />
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="640.0" layoutY="80.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;">
+      <AnchorPane layoutX="640.0" layoutY="80.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #FFFFFF;">
          <children>
             <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
             <Label layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="15" />
@@ -91,7 +75,7 @@
             <Label layoutX="86.0" layoutY="169.0" prefHeight="17.0" prefWidth="58.0" text="Pintura 3" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="163.0" layoutY="396.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;">
+      <AnchorPane layoutX="163.0" layoutY="396.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: FFFFFF;">
          <children>
             <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
             <Label layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="10" />
@@ -107,7 +91,7 @@
             <Label layoutX="79.0" layoutY="164.0" prefHeight="17.0" prefWidth="58.0" text="Pintura 4" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="403.0" layoutY="396.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;">
+      <AnchorPane layoutX="403.0" layoutY="396.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: FFFFFF;">
          <children>
             <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
             <Label layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="10" />
@@ -123,7 +107,7 @@
             <Label layoutX="80.0" layoutY="164.0" prefHeight="17.0" prefWidth="58.0" text="Pintura 5" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="640.0" layoutY="396.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;">
+      <AnchorPane layoutX="640.0" layoutY="396.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: FFFFFF;">
          <children>
             <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
             <Label layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="10" />
@@ -146,5 +130,21 @@
       </Label>
       <Accordion layoutX="187.0" layoutY="21.0" />
       <Separator layoutX="148.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="750.0" prefWidth="6.0" style="-fx-background-color: #2c2c2e;" />
+      <AnchorPane layoutX="403.0" layoutY="80.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
+            <Label layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="30" />
+            <Label layoutX="77.0" layoutY="204.0" text="Disponible" />
+            <TextField layoutX="63.0" layoutY="227.0" prefHeight="25.0" prefWidth="85.0" />
+            <Label layoutX="6.0" layoutY="231.0" prefHeight="17.0" prefWidth="63.0" text="Unidades" />
+            <Button fx:id="idPaint1" layoutX="74.0" layoutY="263.0" mnemonicParsing="false" onAction="#addElement" text="Comprar" />
+            <Label layoutX="112.0" layoutY="184.0" prefHeight="17.0" prefWidth="50.0" text="Precio:" />
+            <Label layoutX="162.0" layoutY="184.0" text="4200" />
+            <Separator layoutX="6.0" layoutY="220.0" prefWidth="200.0" />
+            <Separator layoutX="103.0" layoutY="182.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="8.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="69.0" layoutY="164.0" prefHeight="17.0" prefWidth="75.0" text="Pintura 2" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

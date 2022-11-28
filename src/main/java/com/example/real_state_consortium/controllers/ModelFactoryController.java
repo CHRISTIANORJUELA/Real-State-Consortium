@@ -19,12 +19,9 @@ import java.util.List;
 public class ModelFactoryController implements ModelFactoryService {
     Laboratory laboratory;
 
-
-
     private static class SingletonHolder {
         private final static ModelFactoryController eINSTANCE = new ModelFactoryController();
     }
-
     public static ModelFactoryController getInstance() {
         return SingletonHolder.eINSTANCE;
     }
@@ -73,8 +70,8 @@ public class ModelFactoryController implements ModelFactoryService {
          laboratory.getPaintServiceImpl().addElementCar(lbUnits,lbDisponibility,tfEnterStock,lbPrice,lbNameProduct);
     }
 
-    public void addElementInCar(ModelFactoryController mfc ,String btn , String lbUnits, String lbDisponibility, String tfEnterStock, String lbPrice, String lbNameProduct){
-        laboratory.getAddAtCarImpl().addElementInCar(mfc,btn ,lbUnits,lbDisponibility,tfEnterStock,lbPrice,lbNameProduct);
+    public void addElementIncarr(ModelFactoryController mfc, Laboratory laboratorium, String btn , String lbUnits, String lbDisponibility, String tfEnterStock, String lbPrice, String lbNameProduct){
+        laboratory.getAddAtCarImpl().addElementInCar(mfc, laboratorium, btn ,  lbUnits,  lbDisponibility,  tfEnterStock,  lbPrice,  lbNameProduct);
     }
 
     public  void clearData(){

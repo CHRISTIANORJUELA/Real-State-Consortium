@@ -9,9 +9,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Border;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -29,12 +26,6 @@ public class LoginController implements Initializable {
 
     }
 
-
-
-
-
-
-
     public void comfirmLogin(ActionEvent e) throws IOException {
        if(UtilsMethods1.validateIscampusStringIsTrue(tfName.getText()) && tfPassword.getText() != null){
            String nameAgent = tfName.getText();
@@ -43,18 +34,14 @@ public class LoginController implements Initializable {
            if (mfc.getPassLogin()){
                ChangeViewParticular.sendMainPerson(e);
            }else {
-               PrintMessage.printMessageYellow("Lo sentimos","Pero a un no tienes una cuenta");
+               PrintMessage.printMessageWarning("Lo sentimos","Aun no tienes una cuenta registrate para poder entrar");
            }
        }
     }
 
-
-
-
     public void enterRegister(MouseEvent e) throws IOException{
         ChangeViewGeneral.enterRegister(e);
     }
-
 
     public void goBack(MouseEvent e) throws IOException {
         ChangeViewGeneral.goBack(e);

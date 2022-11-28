@@ -13,7 +13,6 @@ public class UtilsMethods1 {
     private static StringBuilder strDisponibility = new StringBuilder(20);
     private static StringBuilder tfEnterStock = new StringBuilder(15);
 
-
     public static boolean validateIscampusNumberIsTrue(String StringtfEnterStock){
         if ((StringtfEnterStock != "") && (StringtfEnterStock.matches("[0-9]+"))){
             return true;
@@ -22,7 +21,6 @@ public class UtilsMethods1 {
         }
         return false;
     }
-
     public static boolean validateIscampusStringIsTrue(String string){
         if ((string != "") && (string.matches("^[a-zA-Z]*$"))){
             return true;
@@ -31,14 +29,16 @@ public class UtilsMethods1 {
         }
         return false;
     }
-
     public static boolean validateSecondEnter(String unitsElement, String disponibility, String enterStock){
        try {
            int units = Integer.parseInt(unitsElement);
            int stockOfEnter = Integer.parseInt(enterStock);
            loadStr(strDisponibility,disponibility);
-           if (stockOfEnter<=units && strDisponibility.toString().equalsIgnoreCase("Disponible")){
+           if (stockOfEnter>0 && stockOfEnter<=units && strDisponibility.toString().equalsIgnoreCase("Disponible")){
                return true;
+           }else {
+               if (stockOfEnter>units){PrintMessage.printMessageWarning("Acción rechazada","Has excedido la cantidad de unidades disponibles");}}
+               if (stockOfEnter<0){PrintMessage.printMessageWarning("Acción Rechazada","El numero que entraste es incorrecto");
            }
        }catch (NumberFormatException e){
            System.out.println(e);
@@ -46,24 +46,24 @@ public class UtilsMethods1 {
         return false;
     }
 
-
-    public static void validateElementsView(ModelFactoryController mfc ,Button button, Label lbUnits, Label lbDisponibility, TextField tfEnterStock, Label lbPrice, Label lbNameProduct){
-        ArrayList<ElementsOfView> elements = mfc.getElementsInTheView();
-        boolean passOfView = elements.stream().anyMatch(x-> x.getNameView().equals(lbNameProduct));
+    public static void validateElementsView(ArrayList<ElementsOfView> elementsInView ,Button button, Label lbUnits, Label lbDisponibility, TextField tfEnterStock, Label lbPrice, Label lbNameProduct){
+        boolean passOfView = elementsInView.stream().anyMatch(x-> x.getNameView().equals(lbNameProduct));
         if (passOfView){
-            elements.forEach(x->{
+            elementsInView.forEach(x->{
                 if (x.getNameView().getText().equalsIgnoreCase(lbNameProduct.getText())){
                     /*x.getDisponiblilityView().setText(lbDisponibility.getText());
                     x.getStockInView().setText(lbUnits.getText());
 
                      */
-                    x.setStockInView("100");
+                    /*x.setStockInView("100");
                     lbUnits.setAccessibleText("100");
+
+                     */
                 }
             });
-            elements.forEach(x-> System.out.println("Agregado a la vista : "+"Nombre : "+x.getNameView().getText()+" Cantidad : "+x.getStockInView().getText()));
+            elementsInView.forEach(x-> System.out.println("Agregado a la vista : "+"Nombre : "+x.getNameView().getText()+" Cantidad : "+x.getStockInView().getText()));
         }else {
-            elements.add(new ElementsOfView(button,lbNameProduct,lbDisponibility,lbUnits,lbPrice));
+            elementsInView.add(new ElementsOfView(button,lbNameProduct,lbDisponibility,lbUnits,lbPrice));
 
         }
     }

@@ -6,8 +6,6 @@ import javafx.scene.input.MouseEvent;
 import java.io.IOException;
 
 public class ClientController {
-
-
     public void goBack(MouseEvent e) throws IOException {
         ChangeViewGeneral.goBack(e);
     }

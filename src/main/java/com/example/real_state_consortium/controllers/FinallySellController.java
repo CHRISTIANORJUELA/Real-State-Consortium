@@ -61,6 +61,7 @@ public class FinallySellController implements Initializable {
                   allElementsInCar.clear();
                   mfc.clearData();
                   mfc.setNullStructureClassObject();
+                  //receipt.forEach(System.out::println);
               }else {
                   PrintMessage.printMessage("Gracias","Fue un gusto contar contigo");
               }

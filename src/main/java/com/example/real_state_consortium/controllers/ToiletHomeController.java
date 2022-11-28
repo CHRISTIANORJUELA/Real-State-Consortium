@@ -29,10 +29,10 @@ public class ToiletHomeController implements BarCollectionPrincipal1, AddElement
     @FXML
     Label lbNameProduct;
 
-    ModelFactoryController mfc = ModelFactoryController.getInstance();
+
     public void addElement(ActionEvent e){
         Button button = (Button) e.getTarget();
-        StartElementsOfController.firstStep(mfc,button);
+        StartElementsOfController.firstStep(button);
     }
 
 

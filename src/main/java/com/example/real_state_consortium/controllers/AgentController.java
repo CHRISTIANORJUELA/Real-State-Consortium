@@ -71,7 +71,6 @@ public class AgentController implements Initializable {
 
     public void select(MouseEvent e){
         ValidateAgent agentSelect = tableAgents.getSelectionModel().getSelectedItem();
-        tableAgents.getSelectionModel().select(-1);
         if (agentSelect != null){
             tfNameAgent.setText(agentSelect.getNameAgent());
             tfPassWordAgent.setText(agentSelect.getCode());

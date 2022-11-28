@@ -5,6 +5,8 @@ import com.example.real_state_consortium.models.Receipt;
 import com.example.real_state_consortium.models.Structure;
 import com.example.real_state_consortium.services.FinallySellService;
 import com.example.real_state_consortium.utils.Data3;
+import com.example.real_state_consortium.utils.Persistence;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
@@ -30,6 +32,8 @@ public class FinallySellimpl implements FinallySellService {
             amount+=sumValueOfStructure;
             receipt.add(new Receipt(nameAgent,nameClient,structure,amount, LocalDate.now(),true));
         }
+        Persistence.SaveReceipt(receipt);
+        Persistence.readInformation();
     }
 
 

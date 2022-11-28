@@ -15,7 +15,7 @@ public class AgentServiceImpl implements AgentService {
         initializeAgentsIntable();
         boolean passToaddAgent = agentsInTable.stream().anyMatch(x->x.getNameAgent().equalsIgnoreCase(name) || x.getCode().equalsIgnoreCase(passWord));
         if (passToaddAgent){
-            PrintMessage.printMessage("Lo sentimos","Pero el nombre de usurio o la contraseña ya existen");
+            PrintMessage.printMessage("Lo sentimos","El nombre de usurio o la contraseña ya existen");
         }else {
             agentsInTable.add(new ValidateAgent(name,passWord));
         }
@@ -25,20 +25,20 @@ public class AgentServiceImpl implements AgentService {
      if (agentsInTable.size()>2){
          agentsInTable.remove(agentSelect);
      }else {
-         PrintMessage.printMessageYellow("Recuerda","Siempre tienen que haber almenos dos Agentes Activos para que puedan Realizar Ventas");
+         PrintMessage.printMessageWarning("Recuerda","Siempre tienen que haber almenos dos Agentes Activos para que puedan Realizar Ventas");
      }
     }
 
     public void modifyAgents(ValidateAgent v,String name,String passWord){
-        if (checkCondition(agentsInTable,name,passWord)){
+        if (checkCondition(agentsInTable,name,passWord)==0){
             agentsInTable.forEach(x->{
-                if (!notNameInList(name)){
+                if (x.getNameAgent().equalsIgnoreCase(v.getNameAgent()) && x.getCode().equalsIgnoreCase(v.getCode())){
                     x.setNameAgent(name);
-                }
-                if (!notCodeInList(passWord)){
                     x.setCode(passWord);
                 }
             });
+                //notNameInList(name);
+                //notCodeInList(passWord);
             /*if(notNameInList(name)){}
             int contName = 0;
             int contPassWord = 0;
@@ -55,25 +55,23 @@ public class AgentServiceImpl implements AgentService {
             }
 
              */
+        }else if(checkCondition(agentsInTable,name,passWord)==1){
+            agentsInTable.forEach(x->{
+                if (x.getNameAgent().equalsIgnoreCase(name.toLowerCase()) || x.getCode().equalsIgnoreCase(passWord)){
+                    x.setNameAgent(name);
+                    x.setCode(passWord);
+                }
+            });
         }else {
-          PrintMessage.printMessageYellow("Acción fallida","El nombre o la contraseña que quieres poner nueva !ya existen¡");
+            PrintMessage.printMessage("Acción fallida","El nombre o la contraseña que quieres poner nueva !ya existen¡");
+
         }
     }
 
-    private boolean notCodeInList(String passWord) {
-        return agentsInTable.stream().anyMatch(x->x.getCode().equalsIgnoreCase(passWord));
-    }
 
-    private boolean notNameInList(String name) {
-        return agentsInTable.stream().anyMatch(x->x.getNameAgent().equalsIgnoreCase(name.toLowerCase()));
-    }
 
-    public boolean checkCondition(ArrayList<ValidateAgent> agentsInTable,String name,String passWord){
-        long cont = agentsInTable.stream().filter(x->x.getNameAgent().equalsIgnoreCase(name.toLowerCase()) || x.getCode().equalsIgnoreCase(passWord)).count();
-        if (cont==0 || cont==1){
-            return true;
-        }
-        return false;
+    public long checkCondition(ArrayList<ValidateAgent> agentsInTable,String name,String passWord){
+         return agentsInTable.stream().filter(x->x.getNameAgent().equalsIgnoreCase(name.toLowerCase()) || x.getCode().equalsIgnoreCase(passWord)).count();
     }
 
 

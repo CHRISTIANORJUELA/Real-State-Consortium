@@ -76,7 +76,7 @@ public class ChangeViewParticular {
         URL url = new File("src/main/resources/com/example/real_state_consortium/ValidateAgent/login.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         scene = new Scene(root);
-        scene.getStylesheets().add(ChangeViewParticular.class.getResource("./css/loginStyle.css").toExternalForm());
+        //scene.getStylesheets().add(ChangeViewParticular.class.getResource("src/main/resources/com/example/real_state_consortium/ValidateAgent/loginStyle.css").toExternalForm());
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = root.getScene();
         stage.setScene(scene);
@@ -126,7 +126,16 @@ public class ChangeViewParticular {
         URL url = new File("src/main/resources/com/example/real_state_consortium/ValidateAgent/login.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         scene = new Scene(root);
-        //scene.getStylesheets().add("../css/loginStyle.css");
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = root.getScene();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void enterThreadView(MouseEvent e) throws IOException{
+        URL url= new File("src/main/resources/com/example/real_state_consortium/Thread/threadview.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        scene = new Scene(root);
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = root.getScene();
         stage.setScene(scene);

@@ -98,4 +98,16 @@ public class Receipt {
         this.passed = passed;
     }
 
+    @Override
+    public String toString() {
+        return "Receipt{" +
+                "nameAgent='" + nameAgent + '\'' +
+                ", nameBuyer='" + nameBuyer + '\'' +
+                ", elementsAdded=" + elementsAdded +
+                ", structure=" + structure +
+                ", priceSell=" + priceSell +
+                ", daySell=" + daySell +
+                ", passed=" + passed +
+                '}';
+    }
 }

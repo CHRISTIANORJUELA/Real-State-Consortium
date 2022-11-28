@@ -45,11 +45,13 @@ public class CarController implements Initializable,BarCollectionPrincipal1 {
     }
 
     private void getAllElementsInCar() {
-        ArrayList<Data3> arrayOfaddAtCar = mfc.getListAllElementsCar();
-        if (arrayOfaddAtCar.size()>0){
-            calculateTotalStockAndTotalValue(arrayOfaddAtCar);
+        ArrayList<Data3> arrayOfAddAtCar = mfc.getListAllElementsCar();
+        System.out.println("ee");
+        arrayOfAddAtCar.forEach(x-> System.out.println("Car controller "+" name "+x.getNameElement()+" valor "+x.getValue()));
+        if (arrayOfAddAtCar.size()>0){
+            calculateTotalStockAndTotalValue(arrayOfAddAtCar);
             ObservableList<Data3> obsPrincipal =FXCollections.observableArrayList();
-            obsPrincipal.setAll(arrayOfaddAtCar);
+            obsPrincipal.setAll(arrayOfAddAtCar);
             tableCar.setItems(obsPrincipal);
             tableCar.refresh();
         }

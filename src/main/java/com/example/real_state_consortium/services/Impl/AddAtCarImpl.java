@@ -5,20 +5,21 @@ import com.example.real_state_consortium.utils.Data3;
 import com.example.real_state_consortium.utils.DataElements;
 import com.example.real_state_consortium.services.AddAtCarService;
 import com.example.real_state_consortium.utils.PrintMessage;
-import javafx.event.ActionEvent;
-
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 public class AddAtCarImpl implements AddAtCarService {
-
     ArrayList<DataElements> dataElements;
     ArrayList<Data3> data3;
     ArrayList<Data3> data3send;
+    private  PaintServiceImpl paintService;
+    private  ToiletServiceImpl toiletService;
+    private ArrayList<Data3> allElementsIncar;
 
-    public void addElementInCar(ModelFactoryController mfc,String idBtn,String units,String disponibility,String stockEnter,String priceElement,String nameProduct){
-            initializeFirstsData(mfc);
+    public AddAtCarImpl(){}
+    public void addElementInCar(ModelFactoryController mfc,Laboratory laboratory,String idBtn,String units,String disponibility,String stockEnter,String priceElement,String nameProduct){
+            initializeFirstsData(laboratory,mfc);
             int stock = Integer.parseInt(stockEnter);
             float price = Float.parseFloat(priceElement);
             data3.add(new Data3(nameProduct,stock,price));
@@ -27,7 +28,7 @@ public class AddAtCarImpl implements AddAtCarService {
                 double stockPush = calculateStockPush((String) map.getKey(),(double) map.getValue());
                 setData3Send((String) map.getKey(),(double) map.getValue(), stockPush);
             }
-            checkElementsExistsInArrayCar(mfc,data3send);
+            checkElementsExistsInArrayCar(data3send);
             map1.clear();
     }
 
@@ -53,36 +54,38 @@ public class AddAtCarImpl implements AddAtCarService {
             data3send.add(new Data3(name,(int) Math.round(stockPush), totalValue));
         }
     }
-    public void checkElementsExistsInArrayCar(ModelFactoryController mfc,ArrayList<Data3> data3send){
-        ArrayList<Data3> elementsInCar = mfc.getListAllElementsCar();
+    public void checkElementsExistsInArrayCar(ArrayList<Data3> data3send){
         for (Data3 d:data3send){
-            boolean pass = elementsInCar.stream().anyMatch(x-> x.getNameElement().equalsIgnoreCase(d.getNameElement()));
+            boolean pass = allElementsIncar.stream().anyMatch(x-> x.getNameElement().equalsIgnoreCase(d.getNameElement()));
             if (pass){
-                elementsInCar.forEach(x->{
+                allElementsIncar.forEach(x->{
                     if (x.getNameElement().equalsIgnoreCase(d.getNameElement())){
                         x.setStockElement(d.getStockElement());
                         x.setValue(d.getValue());
-                        PrintMessage.printMessage("Atención",x.getNameElement()+" Ha sido Agregado");
+                        PrintMessage.printMessage("Atención"," Ha sido Agregado el elemento al Carrito");
                     }
                 });
             }else {
-                elementsInCar.add(new Data3(d.getNameElement(),d.getStockElement(), d.getValue()));
+                allElementsIncar.add(new Data3(d.getNameElement(),d.getStockElement(), d.getValue()));
             }
+            allElementsIncar.forEach(x-> System.out.println("att at car "+x.getNameElement()+" valor : "+x.getValue()));
         }
-    }
-    public void initializeFirstsData(ModelFactoryController mfc){
-        if (data3 == null){
-            data3 = new ArrayList<>();
 
-        }
+    }
+    public void initializeFirstsData(Laboratory laboratory, ModelFactoryController mfc){
+        if (paintService==null){paintService = laboratory.getPaintServiceImpl();}
+        if (toiletService==null){toiletService=laboratory.getToiletServiceImpl();}
+        if(allElementsIncar==null){allElementsIncar=mfc.getListAllElementsCar();}
+        if (data3 == null){data3 = new ArrayList<>();}
         if (dataElements == null){
             dataElements = new ArrayList<>();
-            dataElements.addAll(mfc.returnDataPaint());
-            dataElements.addAll(mfc.returnDataToilet());
+           // dataElements.addAll(laboratory.getPaintServiceImpl().initializeDataPaint());
+           // dataElements.addAll(mfc.returnDataToilet());
+            dataElements.addAll(paintService.initializeDataPaint());
+            dataElements.addAll(toiletService.initializeDataToilet());
+
         }
-        if (data3send==null){
-            data3send = new ArrayList<>();
-        }
+        if (data3send==null){data3send = new ArrayList<>();}
     }
 
     public void clearData(){

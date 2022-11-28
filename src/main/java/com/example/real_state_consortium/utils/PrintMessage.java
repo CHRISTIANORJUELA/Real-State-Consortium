@@ -2,7 +2,6 @@ package com.example.real_state_consortium.utils;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-
 import java.util.Optional;
 
 public class PrintMessage {
@@ -19,16 +18,24 @@ public class PrintMessage {
     }
 
     public static void printMessage(String messageHeader,String messageContent){
-        Alert a = new Alert(Alert.AlertType.CONFIRMATION);
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
         a.setTitle("Mensaje");
         a.setHeaderText(messageHeader);
         a.setContentText(messageContent);
         a.showAndWait();
     }
 
-    public static void printMessageYellow(String messageHeader,String messageContent){
-        Alert a = new Alert(Alert.AlertType.INFORMATION);
-        a.setTitle("Mensaje");
+    public static void printMessageWarning(String messageHeader,String messageContent){
+        Alert a = new Alert(Alert.AlertType.WARNING);
+        a.setTitle("Incorrecto");
+        a.setHeaderText(messageHeader);
+        a.setContentText(messageContent);
+        a.showAndWait();
+    }
+
+    public static void PrintMessageError(String messageHeader,String messageContent){
+        Alert a = new Alert(Alert.AlertType.ERROR);
+        a.setTitle("Error");
         a.setHeaderText(messageHeader);
         a.setContentText(messageContent);
         a.showAndWait();

@@ -67,4 +67,19 @@ public class Structure {
     public void setTotalPriceOfStructure(float totalPriceOfStructure) {this.totalPriceOfStructure = totalPriceOfStructure;}
     public boolean getStructureWasSell() {return structureWasSell;}
     public void setStructureWasSell(boolean structureWasSell) {this.structureWasSell = structureWasSell;}
+
+    @Override
+    public String toString() {
+        return "Structure{" +
+                "typeStructure='" + typeStructure + '\'' +
+                ", floors=" + floors +
+                ", front=" + front +
+                ", background=" + background +
+                ", extractStructure=" + extractStructure +
+                ", squareMeters=" + squareMeters +
+                ", pricePerMeter2=" + pricePerMeter2 +
+                ", totalPriceOfStructure=" + totalPriceOfStructure +
+                ", structureWasSell=" + structureWasSell +
+                '}';
+    }
 }

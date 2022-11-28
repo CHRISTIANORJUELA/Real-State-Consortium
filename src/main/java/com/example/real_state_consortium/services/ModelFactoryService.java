@@ -5,6 +5,7 @@ import com.example.real_state_consortium.controllers.ModelFactoryController;
 import com.example.real_state_consortium.models.Receipt;
 import com.example.real_state_consortium.models.Structure;
 import com.example.real_state_consortium.models.ValidateAgent;
+import com.example.real_state_consortium.services.Impl.Laboratory;
 import com.example.real_state_consortium.utils.Data3;
 import com.example.real_state_consortium.utils.DataElements;
 import com.example.real_state_consortium.utils.ElementsOfView;
@@ -33,7 +34,7 @@ public interface ModelFactoryService {
 
     void addElementCar(Label lbUnits, Label lbDisponibility, TextField tfEnterStock, Label lbPrice, Label lbNameProduct);
 
-    void addElementInCar(ModelFactoryController mfc,String btn , String lbUnits, String lbDisponibility, String tfEnterStock, String lbPrice, String lbNameProduct);
+    void addElementIncarr(ModelFactoryController mfc,Laboratory laboratory,String btn , String lbUnits, String lbDisponibility, String tfEnterStock, String lbPrice, String lbNameProduct);
 
     void clearData();
 
