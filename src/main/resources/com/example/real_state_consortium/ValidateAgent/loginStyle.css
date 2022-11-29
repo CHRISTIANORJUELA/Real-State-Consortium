@@ -1,4 +1,20 @@
 .background {
-    -fx-background: linear-gradient(70deg, black, white)
+   -fx-background-color: linear-gradient(to left,#63DEFF,#218b8a);
+}
+
+.loginBody{
+ -fx-background-color: linear-gradient(to left,#FCA41C,#FAF427);
+ -fx-border-radius: 50px;
+  -fx-background-radius:50px;
+  -fx-effect: dropshadow( three-pass-box,#38393A,10px,0px,2px,10px);
+}
+
+
+.btnOfLogin{
+ -fx-background-color:#F7B11B;
+}
+
+.btnOfLogin:hover{
+-fx-background-color:#1CC6EC;
 }
 

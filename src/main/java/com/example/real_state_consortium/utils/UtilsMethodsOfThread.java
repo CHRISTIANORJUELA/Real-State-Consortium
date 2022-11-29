@@ -10,7 +10,7 @@ public class UtilsMethodsOfThread {
                     PrintMessage.PrintMessageError("Valor Incorrecto","Has ingresado en algún campo una lentitud muy pequeña porfavor ingresa una mayor a 10000");
                 }
             }else{
-                PrintMessage.printMessageWarning("Valor Incorrecto","Los campos deben contener solo numeros");
+                PrintMessage.printMessageWarning("Valor Incorrecto","Los campos deben contener solo numeros enteros");
             }
         }else {
             PrintMessage.printMessageWarning("Campos Vacios","Por Favor intoduce valores (numericos) a los campos");

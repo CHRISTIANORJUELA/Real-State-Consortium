@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="750.0" prefWidth="880.0" styleClass="background" stylesheets="@loginStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.LoginController">
    <children>
-      <AnchorPane layoutX="301.0" layoutY="172.0" prefHeight="369.0" prefWidth="310.0" style="-fx-background-color: #faa61e;">
+      <AnchorPane layoutX="301.0" layoutY="172.0" prefHeight="369.0" prefWidth="310.0" styleClass="loginBody" stylesheets="@loginStyle.css">
          <children>
             <TextField fx:id="tfName" layoutX="75.0" layoutY="95.0" />
             <TextField fx:id="tfPassword" layoutX="75.0" layoutY="181.0" />
@@ -19,9 +19,9 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="38.0" layoutY="296.0" prefHeight="17.0" prefWidth="133.0" text="¿No tienes Una cuenta? " />
-            <Button layoutX="104.0" layoutY="229.0" mnemonicParsing="false" onAction="#comfirmLogin" text="Iniciar Sección" />
-            <Label layoutX="176.0" layoutY="298.0" onMouseClicked="#enterRegister" text="Registrarse" textFill="#1d75a1">
+            <Label layoutX="39.0" layoutY="296.0" prefHeight="17.0" prefWidth="133.0" text="¿No tienes Una cuenta? " />
+            <Button layoutX="104.0" layoutY="229.0" mnemonicParsing="false" onAction="#comfirmLogin" styleClass="btnOfLogin" stylesheets="@loginStyle.css" text="Iniciar Sección" />
+            <Label layoutX="186.0" layoutY="298.0" onMouseClicked="#enterRegister" text="Registrarse" textFill="#1d75a1">
                <font>
                   <Font name="Marlett" size="13.0" />
                </font>

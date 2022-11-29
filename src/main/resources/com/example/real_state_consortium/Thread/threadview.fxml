@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="629.0" prefWidth="869.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.ThreadExercisesController">
+<AnchorPane prefHeight="880.0" prefWidth="869.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.ThreadExercisesController">
    <children>
       <ProgressBar fx:id="prBar1" layoutX="322.0" layoutY="83.0" prefHeight="20.0" prefWidth="264.0" progress="0.0" />
       <ProgressBar fx:id="prbar2" layoutX="322.0" layoutY="141.0" prefHeight="20.0" prefWidth="264.0" progress="0.0" />
@@ -63,6 +63,21 @@
       <Label layoutX="42.0" layoutY="24.0" onMouseClicked="#goBack" prefHeight="26.0" prefWidth="75.0" text="&lt;-Inicio">
          <font>
             <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="460.0"  prefHeight="26.0" prefWidth="300.0" text="Nota:Es recomendable ingresar datos entre 100 y 10000  ">
+         <font>
+            <Font name="System Regular" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="470.0"  prefHeight="26.0" prefWidth="300.0" text="para ver mejor el ejemplo ">
+         <font>
+            <Font name="System Regular" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="480.0"  prefHeight="26.0" prefWidth="300.0" text="tambiem no colocar los valores tan apeñuscados ">
+         <font>
+            <Font name="System Regular" size="10.0" />
          </font>
       </Label>
    </children>

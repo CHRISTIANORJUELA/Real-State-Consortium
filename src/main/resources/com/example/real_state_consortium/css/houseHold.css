@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@300&display=swap');
+.fatherbox{
+-fx-background-color:linear-gradient(to right top,#0CFEA6 ,#2D7DF0 ,#12EF3E );
+-fx-font-family:'Anek Devanagari', cursive;
+}
+
+.boxIncludeValues{
+-fx-background-radius:10px;
+-fx-border-radius:10px;
+-fx-effect:dropshadow(three-pass-box,#B2B4B3,3px,4px,1px,1px);
+}
+
+.boxIncludeValues:hover{
+-fx-translate-y:-10deg;
+-fx-effect:dropshadow(three-pass-box,#10D372,4px,0.9px,1px,3px);
+}
+
+.btnaddCar{
+ -fx-background-color:#88D1A5;
+}
+
+.btnaddCar:hover{
+ -fx-background-color:#67EA9B;
+}

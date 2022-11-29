@@ -8,50 +8,50 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.HelloController">
+<VBox alignment="CENTER" spacing="20.0" styleClass="panelFather" stylesheets="@css/helloview.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.HelloController">
 
 
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-    <AnchorPane prefHeight="602.0" prefWidth="760.0">
+    <AnchorPane prefHeight="660.0" prefWidth="880.0">
         <children>
-            <Label layoutX="225.0" layoutY="39.0" prefHeight="42.0" prefWidth="368.0" text="Real State Consortium">
+            <Label layoutX="246.0" layoutY="29.0" prefHeight="42.0" prefWidth="368.0" text="Real State Consortium">
                 <font>
                     <Font name="Cambria Bold" size="33.0" />
                 </font>
             </Label>
-            <Label layoutX="718.0" layoutY="14.0" onMouseClicked="#enterAtLogin" prefHeight="30.0" prefWidth="64.0" text="Entrar">
+            <Label layoutX="767.0" layoutY="14.0" onMouseClicked="#enterAtLogin" prefHeight="30.0" prefWidth="64.0" text="Entrar">
                 <font>
                     <Font name="System Bold" size="18.0" />
                 </font>
             </Label>
-         <ImageView fitHeight="114.0" fitWidth="168.0" layoutX="122.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="142.0" fitWidth="196.0" layoutX="118.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\java\com\example\real_state_consortium\images\edificios.jpg" />
             </image>
          </ImageView>
-         <ImageView fitHeight="138.0" fitWidth="203.0" layoutX="290.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="130.0" fitWidth="232.0" layoutX="314.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\java\com\example\real_state_consortium\images\mansiones-4.jpg" />
             </image>
          </ImageView>
-         <ImageView fitHeight="114.0" fitWidth="149.0" layoutX="493.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="130.0" fitWidth="161.0" layoutX="547.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\java\com\example\real_state_consortium\images\casa 2.jpg" />
             </image>
          </ImageView>
-         <Label layoutX="180.0" layoutY="462.0" onMouseClicked="#watchCatalog" text=" Ver Catalogo">
+         <Label layoutX="342.0" layoutY="454.0" onMouseClicked="#watchCatalog" text=" Ver Catalogo">
             <font>
                <Font name="System Bold" size="19.0" />
             </font>
          </Label>
-         <Label layoutX="432.0" layoutY="462.0" onMouseClicked="#quoteProperty" prefHeight="28.0" prefWidth="161.0" text="Cotizar un Predio">
+         <Label layoutX="333.0" layoutY="398.0" onMouseClicked="#quoteProperty" prefHeight="28.0" prefWidth="161.0" text="Cotizar un Predio">
             <font>
                <Font name="System Bold" size="19.0" />
             </font>
          </Label>
-         <Label layoutX="290.0" layoutY="520.0" onMouseClicked="#enterThreadView" text="Ejercicios de Hilos">
+         <Label layoutX="323.0" layoutY="522.0" onMouseClicked="#enterThreadView" text="Ejercicios de Hilos">
             <font>
                <Font name="System Bold" size="19.0" />
             </font>
