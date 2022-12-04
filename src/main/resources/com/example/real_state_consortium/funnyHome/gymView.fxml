@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="880.0" styleClass="fatherbox" stylesheets="@../css/houseHold.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.GymFunny">
+    <children>
+        <AnchorPane prefHeight="750.0" prefWidth="143.0" styleClass="barOfBox">
+            <children>
+                <ImageView fitHeight="142.0" fitWidth="146.0" layoutX="10.0" layoutY="201.0" onMouseClicked="#decorationHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\resources\com\example\real_state_consortium\Imagess\MainsHouse\icon mansion.png" />
+               </image></ImageView>
+                <Label layoutX="15.0" layoutY="343.0" onMouseClicked="#decorationHome" text="Decoracion del Hogar">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="142.0" fitWidth="135.0" layoutX="15.0" layoutY="455.0" onMouseClicked="#funny" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\resources\com\example\real_state_consortium\Imagess\MainsHouse\pesass.png" />
+               </image></ImageView>
+                <Label layoutX="54.0" layoutY="602.0" onMouseClicked="#funny" text="Diversion">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Separator layoutX="156.0" orientation="VERTICAL" prefHeight="750.0" prefWidth="6.0" style="-fx-background-color: #2c2c2e;" />
+                <Label layoutX="36.0" layoutY="41.0" onMouseClicked="#goBack" prefHeight="26.0" prefWidth="75.0" text="&lt;-Inicio">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label layoutX="458.0" layoutY="18.0" prefHeight="45.0" prefWidth="135.0" text="Gimnasio">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="171.0" layoutY="80.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;" styleClass="boxIncludeValues">
+            <children>
+                <Label fx:id="lbInfoStock" layoutX="20.0" layoutY="184.0" text="Cantidad :" />
+                <Label fx:id="lbStock1" layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="20" />
+                <Label fx:id="lbDisponibylity1" layoutX="77.0" layoutY="204.0" text="Disponible" />
+                <TextField fx:id="tfUnits1" layoutX="63.0" layoutY="227.0" prefHeight="25.0" prefWidth="85.0" />
+                <Button layoutX="74.0" layoutY="263.0" mnemonicParsing="false" onAction="#addElement" styleClass="btnaddCar" stylesheets="@../css/houseHold.css" text="Comprar" />
+                <Label fx:id="lbInfoPrice" layoutX="112.0" layoutY="184.0" prefHeight="17.0" prefWidth="43.0" text="Precio:" />
+                <Label fx:id="lbPrice1" layoutX="162.0" layoutY="184.0" text="10000" />
+                <Separator layoutX="6.0" layoutY="220.0" prefWidth="200.0" />
+                <Separator layoutX="103.0" layoutY="182.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="47.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                  <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\resources\com\example\real_state_consortium\Imagess\Gym\escalera.jpg" />
+                    </image></ImageView>
+                <Label fx:id="nameProduct1" layoutX="92.0" layoutY="164.0" prefHeight="17.0" prefWidth="57.0" text="Escalera" />
+                <Label layoutX="8.0" layoutY="231.0" text="Unidades" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="403.0" layoutY="80.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;" styleClass="boxIncludeValues" stylesheets="@../css/houseHold.css">
+            <children>
+                <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
+                <Label fx:id="lbStock2" layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="15" />
+                <Label fx:id="lbDisponibylity2" layoutX="77.0" layoutY="204.0" text="Disponible" />
+                <TextField fx:id="tfUnits2" layoutX="63.0" layoutY="227.0" prefHeight="25.0" prefWidth="85.0" />
+                <Button layoutX="74.0" layoutY="263.0" mnemonicParsing="false" onAction="#addElement" styleClass="btnaddCar" text="Comprar" />
+                <Label layoutX="112.0" layoutY="184.0" prefHeight="17.0" prefWidth="50.0" text="Precio:" />
+                <Label fx:id="lbPrice2" layoutX="162.0" layoutY="184.0" text="12000" />
+                <Separator layoutX="6.0" layoutY="220.0" prefWidth="200.0" />
+                <Separator layoutX="103.0" layoutY="182.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="34.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\resources\com\example\real_state_consortium\Imagess\Gym\Leg curl.jpg" />
+                    </image></ImageView>
+                <Label fx:id="nameProduct2" layoutX="81.0" layoutY="164.0" prefHeight="17.0" prefWidth="63.0" text="Leg Curl" />
+                <Label layoutX="6.0" layoutY="231.0" text="Unidades" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="640.0" layoutY="80.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;" styleClass="boxIncludeValues" stylesheets="@../css/houseHold.css">
+            <children>
+                <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
+                <Label fx:id="lbStock3" layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="10" />
+                <Label fx:id="lbDisponibylity3" layoutX="77.0" layoutY="204.0" text="Disponible" />
+                <TextField fx:id="tfUnits3" layoutX="63.0" layoutY="227.0" prefHeight="25.0" prefWidth="85.0" />
+                <Label layoutX="8.0" layoutY="231.0" text="Unidades" />
+                <Button layoutX="74.0" layoutY="263.0" mnemonicParsing="false" onAction="#addElement" styleClass="btnaddCar" text="Comprar" />
+                <Label layoutX="112.0" layoutY="184.0" prefHeight="17.0" prefWidth="50.0" text="Precio:" />
+                <Label fx:id="lbPrice3" layoutX="162.0" layoutY="184.0" text="8000" />
+                <Separator layoutX="6.0" layoutY="220.0" prefWidth="200.0" />
+                <Separator layoutX="103.0" layoutY="182.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="37.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\resources\com\example\real_state_consortium\Imagess\Gym\Banco olimpico.png" />
+                    </image></ImageView>
+                <Label fx:id="nameProduct3" layoutX="65.0" layoutY="164.0" prefHeight="17.0" prefWidth="94.0" text="Banco Olimpico" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="171.0" layoutY="405.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;" styleClass="boxIncludeValues" stylesheets="@../css/houseHold.css">
+            <children>
+                <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
+                <Label fx:id="lbStock4" layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="10" />
+                <Label fx:id="lbDisponibylity4" layoutX="77.0" layoutY="204.0" text="Disponible" />
+                <TextField fx:id="tfUnits4" layoutX="63.0" layoutY="227.0" prefHeight="25.0" prefWidth="85.0" />
+                <Label layoutX="8.0" layoutY="231.0" text="Unidades" />
+                <Button layoutX="74.0" layoutY="263.0" mnemonicParsing="false" onAction="#addElement" styleClass="btnaddCar" text="Comprar" />
+                <Label layoutX="112.0" layoutY="184.0" prefHeight="17.0" prefWidth="50.0" text="Precio:" />
+                <Label fx:id="lbPrice4" layoutX="162.0" layoutY="184.0" text="13000" />
+                <Separator layoutX="6.0" layoutY="220.0" prefWidth="200.0" />
+                <Separator layoutX="103.0" layoutY="182.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+                <Label fx:id="nameProduct4" layoutX="81.0" layoutY="158.0" prefHeight="17.0" prefWidth="63.0" text="Corredora" />
+                <ImageView fitHeight="161.0" fitWidth="162.0" layoutX="28.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\resources\com\example\real_state_consortium\Imagess\Gym\cinta-de-correr.jpg" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="403.0" layoutY="405.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;" styleClass="boxIncludeValues" stylesheets="@../css/houseHold.css">
+            <children>
+                <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
+                <Label fx:id="lbStock5" layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="11" />
+                <Label fx:id="lbDisponibylity5" layoutX="77.0" layoutY="204.0" text="Disponible" />
+                <TextField fx:id="tfUnits5" layoutX="63.0" layoutY="227.0" prefHeight="25.0" prefWidth="85.0" />
+                <Label layoutX="8.0" layoutY="231.0" text="Unidades" />
+                <Button layoutX="74.0" layoutY="263.0" mnemonicParsing="false" onAction="#addElement" styleClass="btnaddCar" text="Comprar" />
+                <Label layoutX="112.0" layoutY="184.0" prefHeight="17.0" prefWidth="50.0" text="Precio:" />
+                <Label fx:id="lbPrice5" layoutX="162.0" layoutY="184.0" text="15000" />
+                <Separator layoutX="6.0" layoutY="220.0" prefWidth="200.0" />
+                <Separator layoutX="103.0" layoutY="182.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\resources\com\example\real_state_consortium\Imagess\Gym\Prensa.jpg" />
+                    </image></ImageView>
+                <Label fx:id="nameProduct5" layoutX="87.0" layoutY="156.0" prefHeight="17.0" prefWidth="50.0" text="Prensa" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="640.0" layoutY="405.0" prefHeight="302.0" prefWidth="215.0" style="-fx-background-color: #f7f7f7;" styleClass="boxIncludeValues" stylesheets="@../css/houseHold.css">
+            <children>
+                <Label layoutX="20.0" layoutY="184.0" text="Cantidad :" />
+                <Label fx:id="lbStock6" layoutX="83.0" layoutY="184.0" prefHeight="17.0" prefWidth="25.0" text="15" />
+                <Label fx:id="lbDisponibylity6" layoutX="77.0" layoutY="204.0" text="Disponible" />
+                <TextField fx:id="tfUnits6" layoutX="63.0" layoutY="227.0" prefHeight="25.0" prefWidth="85.0" />
+                <Label layoutX="9.0" layoutY="231.0" text="Unidades" />
+                <Button layoutX="74.0" layoutY="263.0" mnemonicParsing="false" onAction="#addElement" styleClass="btnaddCar" text="Comprar" />
+                <Label layoutX="112.0" layoutY="184.0" prefHeight="17.0" prefWidth="50.0" text="Precio:" />
+                <Label fx:id="lbPrice6" layoutX="162.0" layoutY="184.0" text="35000" />
+                <Separator layoutX="6.0" layoutY="220.0" prefWidth="200.0" />
+                <Separator layoutX="103.0" layoutY="182.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="6.0" />
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="9.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="C:\Users\user.LAPTOP-AEROGVI0\Downloads\Java Projects\Real_State_Consortium\src\main\resources\com\example\real_state_consortium\Imagess\Gym\SuperCombo fuerza.png" />
+               </image></ImageView>
+                <Label fx:id="nameProduct6" layoutX="57.0" layoutY="165.0" prefHeight="17.0" prefWidth="111.0" text="Super fuerza 3000" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="739.0" layoutY="34.0" onMouseClicked="#watchCar" prefHeight="27.0" prefWidth="126.0" text="Ver Carrito -&gt;">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Accordion layoutX="7.0" layoutY="7.0" prefHeight="66.0" prefWidth="202.0" />
+    </children>
+</AnchorPane>

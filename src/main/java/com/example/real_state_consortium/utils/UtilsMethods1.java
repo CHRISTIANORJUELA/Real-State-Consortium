@@ -9,12 +9,10 @@ import java.util.ArrayList;
 
 public class UtilsMethods1 {
 
-    private static StringBuilder strUnits = new StringBuilder(20);
     private static StringBuilder strDisponibility = new StringBuilder(20);
-    private static StringBuilder tfEnterStock = new StringBuilder(15);
 
     public static boolean validateIscampusNumberIsTrue(String StringtfEnterStock){
-        if ((StringtfEnterStock != "") && (StringtfEnterStock.matches("[0-9]+"))){
+        if ((StringtfEnterStock != null) && (StringtfEnterStock.matches("[0-9]+"))){
             return true;
         }else{
             PrintMessage.printMessage("Por Favor","Llena los campos correspondientes  , con datos Correctos solo (numeros)");
@@ -57,14 +55,12 @@ public class UtilsMethods1 {
                      */
                     /*x.setStockInView("100");
                     lbUnits.setAccessibleText("100");
-
-                     */
+                    */
                 }
             });
             elementsInView.forEach(x-> System.out.println("Agregado a la vista : "+"Nombre : "+x.getNameView().getText()+" Cantidad : "+x.getStockInView().getText()));
         }else {
             elementsInView.add(new ElementsOfView(button,lbNameProduct,lbDisponibility,lbUnits,lbPrice));
-
         }
     }
     public static boolean makeSurePassIsTrue(String nameClient, String nameAgent, String typeTarget, String numberTargetCredit, ArrayList<Data3> allElementsInCar, Structure structure){

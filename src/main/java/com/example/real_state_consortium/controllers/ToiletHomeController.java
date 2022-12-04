@@ -13,30 +13,10 @@ import java.io.IOException;
 
 
 public class ToiletHomeController implements BarCollectionPrincipal1, AddElement {
-
-    @FXML
-    Label lbUnits;
-
-    @FXML
-    Label lbDisponibility;
-
-    @FXML
-    TextField tfEnterStock;
-
-    @FXML
-    Label lbPrice;
-
-    @FXML
-    Label lbNameProduct;
-
-
     public void addElement(ActionEvent e){
         Button button = (Button) e.getTarget();
         StartElementsOfController.firstStep(button);
     }
-
-
-
     public void watchCar(MouseEvent e) throws IOException{
         ChangeViewGeneral.watchCar(e);
     }
@@ -46,10 +26,6 @@ public class ToiletHomeController implements BarCollectionPrincipal1, AddElement
 
     public void funny(MouseEvent e) throws IOException{
         ChangeViewGeneral.funny(e);
-    }
-
-    public void relaxation(MouseEvent e) throws IOException{
-        ChangeViewGeneral.relaxation(e);
     }
 
     public void goBack(MouseEvent e) throws IOException{

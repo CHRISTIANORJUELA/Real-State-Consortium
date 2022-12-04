@@ -21,9 +21,7 @@ public class PaintHomeController implements BarCollectionPrincipal1, AddElement 
     public void funny(MouseEvent e) throws IOException{
         ChangeViewGeneral.funny(e);
     }
-    public void relaxation(MouseEvent e) throws IOException{
-        ChangeViewGeneral.relaxation(e);
-    }
+
     public void goBack(MouseEvent e) throws IOException{
         ChangeViewGeneral.goBack(e);
     }

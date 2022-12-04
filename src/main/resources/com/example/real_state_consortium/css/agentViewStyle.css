@@ -1,0 +1,4 @@
+.fatherBox{
+-fx-background-color : radial-gradient(focus-angle 45deg, focus-distance 20%, center 50% 25%, radius 70%, reflect, #40DACE, #278D85 75%, #69DAD1);
+-fx-effect: dropshadow( three-pass-box,#38393A,10px,0px,2px,10px);
+}

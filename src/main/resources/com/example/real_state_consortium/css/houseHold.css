@@ -22,3 +22,7 @@
 .btnaddCar:hover{
  -fx-background-color:#67EA9B;
 }
+
+.barOfBox{
+-fx-background-color:linear-gradient(to right bottom,#2D7DF0,#12EF3E);
+}

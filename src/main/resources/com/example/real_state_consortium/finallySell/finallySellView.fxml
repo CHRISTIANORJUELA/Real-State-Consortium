@@ -12,49 +12,62 @@
 
 <AnchorPane prefHeight="750.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.FinallySellController">
    <children>
-      <TextField fx:id="tfNumTargetCredit" layoutX="378.0" layoutY="325.0" />
-      <TextField fx:id="tfName" layoutX="378.0" layoutY="169.0" />
-      <Label layoutX="385.0" layoutY="62.0" text="Digite sus Datos">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font></Label>
-      <Label layoutX="263.0" layoutY="173.0" text="Ingrese su Nombre" />
-      <ChoiceBox fx:id="chTypeTarget" layoutX="378.0" layoutY="267.0" prefWidth="150.0" />
-      <Label layoutX="274.0" layoutY="271.0" text="Tipo de Tarjeta" />
-      <Label layoutX="244.0" layoutY="329.0" text="Numero de la tarjeta" />
-      <Button layoutX="376.0" layoutY="375.0" mnemonicParsing="false" onAction="#btnFinallySell" text="Desea Finalizar su compra" />
-      <TextArea fx:id="textArea" layoutX="236.0" layoutY="440.0" prefHeight="200.0" prefWidth="433.0" />
-      <Label layoutX="189.0" layoutY="216.0" text="Nombre del Agente inmoviliario" />
-      <ChoiceBox fx:id="chNameAgent" layoutX="378.0" layoutY="212.0" prefWidth="150.0" />
       <Accordion layoutX="14.0" layoutY="14.0" prefHeight="73.0" prefWidth="202.0" />
       <SplitPane dividerPositions="0.9285714285714286" orientation="VERTICAL" prefHeight="44.0" prefWidth="880.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="23.0" prefWidth="878.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="103.0" prefWidth="878.0" styleClass="barUp" stylesheets="@../css/finallySellStyle.css">
                <children>
                   <Label layoutX="35.0" layoutY="10.0" onMouseClicked="#goBack" text="Inicio">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Label layoutX="268.0" layoutY="10.0" text="Ver Catalogo">
+                  <Label layoutX="268.0" layoutY="10.0" onMouseClicked="#watchCatalog" text="Ver Catalogo">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Label layoutX="497.0" layoutY="10.0" text="Cotizar un Predio">
+                  <Label layoutX="497.0" layoutY="10.0" onMouseClicked="#quoteProperty" text="Cotizar un Predio">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Label layoutX="761.0" layoutY="10.0" text="Ver Carrito">
+                  <Label layoutX="761.0" layoutY="10.0" onMouseClicked="#watchCar" text="Ver Carrito">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="6.0" prefWidth="878.0" stylesheets="@../css/finallySellStyle.css" />
         </items>
       </SplitPane>
+      <AnchorPane layoutY="41.0" prefHeight="712.0" prefWidth="880.0" styleClass="boxFather" stylesheets="@../css/finallySellStyle.css">
+         <children>
+            <AnchorPane layoutX="115.0" layoutY="54.0" prefHeight="613.0" prefWidth="658.0" styleClass="boxMain" stylesheets="@../css/finallySellStyle.css">
+               <children>
+                  <Label layoutX="142.0" layoutY="85.0" text="Ingrese su Nombre">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfName" layoutX="263.0" layoutY="81.0" />
+                  <Label layoutX="74.0" layoutY="134.0" text="Nombre del Agente inmoviliario" />
+                  <ChoiceBox fx:id="chNameAgent" layoutX="262.0" layoutY="130.0" prefWidth="150.0" />
+                  <Label layoutX="174.0" layoutY="199.0" text="Tipo de Tarjeta" />
+                  <ChoiceBox fx:id="chTypeTarget" layoutX="262.0" layoutY="195.0" prefWidth="150.0" />
+                  <Label layoutX="144.0" layoutY="271.0" text="Numero de la tarjeta" />
+                  <TextField fx:id="tfNumTargetCredit" layoutX="263.0" layoutY="267.0" />
+                  <Button layoutX="260.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnFinallySell" text="Desea Finalizar su compra" />
+                  <TextArea fx:id="textArea" layoutX="121.0" layoutY="393.0" prefHeight="200.0" prefWidth="433.0" />
+                  <Label layoutX="269.0" layoutY="14.0" text="Digite sus Datos">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

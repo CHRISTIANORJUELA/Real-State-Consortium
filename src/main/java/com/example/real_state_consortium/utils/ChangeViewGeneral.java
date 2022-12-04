@@ -42,7 +42,6 @@ public class ChangeViewGeneral {
         stage.setScene(scene);
         stage.show();
     }
-
     public static void relaxation(MouseEvent e) throws IOException{
         URL url= new File("src/main/resources/com/example/real_state_consortium/houseHoldItems/mainRelaxationHome.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);

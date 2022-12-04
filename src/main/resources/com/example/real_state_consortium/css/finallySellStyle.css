@@ -1,0 +1,14 @@
+.barUp{
+-fx-background-color:linear-gradient(to right,white,#12CAB3);
+}
+
+.boxFather{
+-fx-background-color : radial-gradient(focus-angle 90deg, focus-distance 90%, center 50% 50%, radius 50%, reflect, #07C9AF , #06AB97 75%, #07C9AF);
+}
+
+.boxMain{
+-fx-background-color:linear-gradient(to right,D59306,#EB9C22);
+-fx-background-radius:10px;
+-fx-border-radius:10px;
+-fx-effect: dropshadow( three-pass-box,black,20px,0px,0px,0px);
+}

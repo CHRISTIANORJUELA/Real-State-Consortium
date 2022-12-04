@@ -76,7 +76,6 @@ public class ChangeViewParticular {
         URL url = new File("src/main/resources/com/example/real_state_consortium/ValidateAgent/login.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         scene = new Scene(root);
-        //scene.getStylesheets().add(ChangeViewParticular.class.getResource("src/main/resources/com/example/real_state_consortium/ValidateAgent/loginStyle.css").toExternalForm());
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = root.getScene();
         stage.setScene(scene);
@@ -132,8 +131,8 @@ public class ChangeViewParticular {
         stage.show();
     }
 
-    public static void enterThreadView(MouseEvent e) throws IOException{
-        URL url= new File("src/main/resources/com/example/real_state_consortium/Thread/threadview.fxml").toURI().toURL();
+    public static void sendGymFunny(MouseEvent e) throws IOException{
+        URL url= new File("src/main/resources/com/example/real_state_consortium/funnyHome/gymView.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         scene = new Scene(root);
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();

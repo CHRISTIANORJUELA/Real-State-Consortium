@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="750.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.AgentController">
+<AnchorPane prefHeight="750.0" prefWidth="880.0" styleClass="fatherBox" stylesheets="@../css/agentViewStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.AgentController">
    <children>
       <TableView fx:id="tableAgents" layoutY="437.0" onMouseClicked="#select" prefHeight="313.0" prefWidth="881.0">
         <columns>

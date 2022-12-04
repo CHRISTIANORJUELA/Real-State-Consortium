@@ -1,11 +1,11 @@
 package com.example.real_state_consortium.services.Impl;
 
 public class Laboratory {
-    private ExercisesPracticeImpl exercisesPracticeImpl;
     private PaintServiceImpl paintServiceImpl;
     private KitchenServiceImpl kitchenServiceImpl;
     private FloorServiceImpl floorServiceImpl;
     private ToiletServiceImpl toiletServiceImpl;
+    private GymServiceImpl gymServiceImpl;
     private AddAtCarImpl addAtCarImpl;
     private CarServiceImpl carServiceImpl;
     private StructureServiceImpl structureServiceImpl;
@@ -16,7 +16,6 @@ public class Laboratory {
     private RegisterServiceImpl registerServiceImpl;
 
     public Laboratory(){
-        exercisesPracticeImpl = new ExercisesPracticeImpl();
         paintServiceImpl = new PaintServiceImpl();
         kitchenServiceImpl = new KitchenServiceImpl();
         floorServiceImpl = new FloorServiceImpl();
@@ -28,12 +27,8 @@ public class Laboratory {
         finallySellimpl = new FinallySellimpl();
         loginServiceImpl = new LoginServiceImpl();
         registerServiceImpl = new RegisterServiceImpl();
+        gymServiceImpl = new GymServiceImpl();
     }
-
-    public ExercisesPracticeImpl getExercisesPracticeImpl() {
-        return exercisesPracticeImpl;
-    }
-
     public PaintServiceImpl getPaintServiceImpl() {
         return paintServiceImpl;
     }
@@ -45,6 +40,8 @@ public class Laboratory {
     public FloorServiceImpl getFloorServiceImpl() {
         return floorServiceImpl;
     }
+
+    public GymServiceImpl getGymServiceImpl(){return gymServiceImpl;}
 
     public ToiletServiceImpl getToiletServiceImpl() {
         return toiletServiceImpl;

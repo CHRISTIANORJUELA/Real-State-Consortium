@@ -134,9 +134,19 @@ public class FinallySellController implements Initializable {
         }
         return false;
     }
-    @FXML
+
     public void goBack(MouseEvent e) throws IOException {
         ChangeViewGeneral.goBack(e);
     }
+    public void watchCar(MouseEvent e) throws IOException {
+        ChangeViewGeneral.watchCar(e);
+    }
+    public void quoteProperty(MouseEvent e) throws IOException{
+        ChangeViewParticular.quoteProperty(e);
+    }
+    public void watchCatalog(MouseEvent e) throws IOException{
+        ChangeViewParticular.watchCatalog(e);
+    }
+
 
 }

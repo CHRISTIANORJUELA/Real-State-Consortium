@@ -13,19 +13,13 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class LoginController implements Initializable {
-
+public class LoginController{
     @FXML
     private TextField tfName;
-
     @FXML
     private TextField tfPassword;
 
     ModelFactoryController mfc = ModelFactoryController.getInstance();
-    public void initialize(URL url, ResourceBundle rbs){
-
-    }
-
     public void comfirmLogin(ActionEvent e) throws IOException {
        if(UtilsMethods1.validateIscampusStringIsTrue(tfName.getText()) && tfPassword.getText() != null){
            String nameAgent = tfName.getText();
@@ -38,15 +32,10 @@ public class LoginController implements Initializable {
            }
        }
     }
-
     public void enterRegister(MouseEvent e) throws IOException{
         ChangeViewGeneral.enterRegister(e);
     }
-
     public void goBack(MouseEvent e) throws IOException {
         ChangeViewGeneral.goBack(e);
     }
-
-
-
 }

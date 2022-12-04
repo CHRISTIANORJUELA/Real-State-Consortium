@@ -9,34 +9,22 @@ import javafx.scene.input.MouseEvent;
 import java.io.IOException;
 
 public class KitchenHomeController implements BarCollectionPrincipal1, AddElement {
+    @Override
     public void addElement(ActionEvent e){
         Button button = (Button) e.getTarget();
-        Object tfUnits = button.getParent().getChildrenUnmodifiable();
-        System.out.println(tfUnits.toString());
+        StartElementsOfController.firstStep(button);
     }
-
-    public void loadCar(Button button){
-
-    }
-
     public void watchCar(MouseEvent e) throws IOException{
         ChangeViewGeneral.watchCar(e);
     }
-
     public void decorationHome(MouseEvent e) throws IOException {
         ChangeViewGeneral.decorationHome(e);
     }
-
     public void funny(MouseEvent e) throws IOException{
         ChangeViewGeneral.funny(e);
-    }
-
-    public void relaxation(MouseEvent e) throws IOException{
-        ChangeViewGeneral.relaxation(e);
     }
 
     public void goBack(MouseEvent e) throws IOException{
         ChangeViewGeneral.goBack(e);
     }
-
 }

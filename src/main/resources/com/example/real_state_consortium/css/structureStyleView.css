@@ -1,0 +1,18 @@
+.fatherBox{
+-fx-background-color : radial-gradient(focus-angle 45deg, focus-distance 20%, center 50% 80%, radius 50%, reflect, #47E4C3, #4DC0C5 75%, #76F3F9);
+}
+
+.mainCenter{
+-fx-background-color: linear-gradient(to right top, #53EBB8,#5393EB);
+-fx-background-radius: 20px;
+-fx-border-radius:20px;
+-fx-effect: dropshadow( three-pass-box,#38393A,10px,0px,5px,10px);
+}
+
+.btnCalculate{
+-fx-background-color:#5393EB;
+}
+
+.btnCalculate:hover{
+-fx-background-color:#37D1D3;
+}

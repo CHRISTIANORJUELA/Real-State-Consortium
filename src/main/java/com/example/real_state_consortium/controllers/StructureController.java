@@ -91,10 +91,17 @@ public class StructureController implements Initializable {
     public void goBack(MouseEvent e) throws IOException {
         ChangeViewGeneral.goBack(e);
     }
+
+    public void watchCatalog(MouseEvent e)  throws IOException{
+        ChangeViewParticular.watchCatalog(e);
+    }
     public void finallySell(MouseEvent e)throws IOException{
         ChangeViewParticular.finallySell(e);
     }
 
+    public void watchCar(MouseEvent e) throws IOException{
+        ChangeViewGeneral.watchCar(e);
+    }
 
 
 }

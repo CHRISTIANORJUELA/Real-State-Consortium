@@ -4,58 +4,54 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="585.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.CarController">
+<AnchorPane prefHeight="750.0" prefWidth="858.0" styleClass="boxFather" stylesheets="@../css/carstyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.CarController">
    <children>
-      <TableView fx:id="tableCar" layoutX="-1.0" layoutY="273.0" prefHeight="272.0" prefWidth="802.0">
+      <TableView fx:id="tableCar" layoutY="355.0" prefHeight="292.0" prefWidth="902.0" stylesheets="@../css/carstyle.css">
         <columns>
-          <TableColumn fx:id="clName" prefWidth="231.0" text="Nombre" />
-          <TableColumn fx:id="clStock" prefWidth="294.0" text="Cantidad" />
-            <TableColumn fx:id="clValue" prefWidth="326.0" text="Valor Total" />
+          <TableColumn fx:id="clName" prefWidth="251.0" text="Nombre" />
+          <TableColumn fx:id="clStock" prefWidth="309.0" text="Cantidad" />
+            <TableColumn fx:id="clValue" prefWidth="341.0" text="Valor Total" />
         </columns>
       </TableView>
-      <Label layoutX="359.0" layoutY="80.0" text="Carrito">
+      <Label layoutX="408.0" layoutY="80.0" text="Carrito">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="-1.0" prefHeight="56.0" prefWidth="803.0">
+      <AnchorPane layoutX="-1.0" prefHeight="49.0" prefWidth="902.0" styleClass="barUp" stylesheets="@../css/carstyle.css">
          <children>
             <Label layoutX="24.0" layoutY="15.0" onMouseClicked="#goBack" prefHeight="26.0" prefWidth="75.0" text="&lt;-Inicio">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <Label layoutX="120.0" layoutY="19.0" onMouseClicked="#decorationHome" text="Decoracion del hogar">
+            <Label layoutX="168.0" layoutY="20.0" onMouseClicked="#decorationHome" text="Decoracion del hogar">
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label layoutX="375.0" layoutY="19.0" onMouseClicked="#funny" text="Diversión">
+            <Label layoutX="381.0" layoutY="20.0" onMouseClicked="#funny" text="Diversión">
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label layoutX="280.0" layoutY="19.0" onMouseClicked="#relaxation" text="Relajación">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="459.0" layoutY="18.0" onMouseClicked="#quoteProperty" text="Cotizar la Estructura">
+            <Label layoutX="523.0" layoutY="19.0" onMouseClicked="#quoteProperty" text="Cotizar una Estructura">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="614.0" layoutY="15.0" onMouseClicked="#finallySell" text="finalizar la Compra -&gt;">
+            <Label layoutX="706.0" layoutY="15.0" onMouseClicked="#finallySell" text="finalizar la Compra -&gt;">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="186.0" layoutY="545.0" prefHeight="26.0" prefWidth="616.0">
+      <AnchorPane layoutX="278.0" layoutY="657.0" prefHeight="26.0" prefWidth="616.0">
          <children>
             <Label layoutX="347.0" layoutY="5.0" text="Total Acumulado : ">
                <font>
@@ -71,6 +67,9 @@
             <Label fx:id="lbTotalStock" layoutX="175.0" layoutY="5.0" text="0" />
          </children>
       </AnchorPane>
-      <Separator layoutY="546.0" prefHeight="1.0" prefWidth="802.0" />
+      <Separator layoutX="-17.0" layoutY="645.0" prefHeight="5.0" prefWidth="918.0" />
    </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
 </AnchorPane>

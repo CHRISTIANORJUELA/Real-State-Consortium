@@ -37,24 +37,6 @@ public class AgentServiceImpl implements AgentService {
                     x.setCode(passWord);
                 }
             });
-                //notNameInList(name);
-                //notCodeInList(passWord);
-            /*if(notNameInList(name)){}
-            int contName = 0;
-            int contPassWord = 0;
-            for (int i=0;i<agentsInTable.size();i++){
-                if (agentsInTable.get(i).getNameAgent().equalsIgnoreCase(name.toLowerCase())){
-                    contName++;
-                }
-                if (agentsInTable.get(i).getCode().equalsIgnoreCase(passWord)){
-                    contPassWord++;
-                }
-            }
-            if (contName<=0){
-                modifyName;
-            }
-
-             */
         }else if(checkCondition(agentsInTable,name,passWord)==1){
             agentsInTable.forEach(x->{
                 if (x.getNameAgent().equalsIgnoreCase(name.toLowerCase()) || x.getCode().equalsIgnoreCase(passWord)){
@@ -64,16 +46,12 @@ public class AgentServiceImpl implements AgentService {
             });
         }else {
             PrintMessage.printMessage("Acción fallida","El nombre o la contraseña que quieres poner nueva !ya existen¡");
-
         }
     }
-
-
 
     public long checkCondition(ArrayList<ValidateAgent> agentsInTable,String name,String passWord){
          return agentsInTable.stream().filter(x->x.getNameAgent().equalsIgnoreCase(name.toLowerCase()) || x.getCode().equalsIgnoreCase(passWord)).count();
     }
-
 
     public void searchAgent(String name){
         initializeAgentsFilter();
@@ -82,7 +60,6 @@ public class AgentServiceImpl implements AgentService {
             agentsIntableFilter.add(x);
         });
     }
-
 
     public void initializeAgentsIntable(){
         if (agentsInTable == null){

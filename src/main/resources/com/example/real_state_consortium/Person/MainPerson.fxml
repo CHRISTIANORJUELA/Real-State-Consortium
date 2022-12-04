@@ -4,8 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="750.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.MainPersonController">
+<AnchorPane prefHeight="750.0" prefWidth="880.0" styleClass="fatherBox" stylesheets="@../css/mainsBar.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.MainPersonController">
    <children>
       <Label layoutX="353.0" layoutY="304.0" onMouseClicked="#seeAgentsCrud" text="Administrar Agentes">
          <font>

@@ -7,13 +7,7 @@ import java.util.List;
 
 public interface StructureService {
     void calculateStructure(ModelFactoryController mfc, float metersBackground, float meterFront, int floors, int extract, String stucture);
-
-    void deleteStructureFalse();
-
-    List<Structure> getStructures();
-
     Structure getStructureClass();
-
     void setNullStructureClassObject();
 
 }

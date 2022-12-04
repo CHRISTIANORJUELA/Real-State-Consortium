@@ -15,7 +15,4 @@ public class HelloController {
     public void quoteProperty(MouseEvent e) throws IOException{
         ChangeViewParticular.quoteProperty(e);
     }
-    public void enterThreadView(MouseEvent e) throws IOException{
-       ChangeViewParticular.enterThreadView(e);
-    }
 }

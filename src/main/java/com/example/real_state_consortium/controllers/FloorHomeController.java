@@ -10,17 +10,11 @@ import java.io.IOException;
 
 
 public class FloorHomeController implements BarCollectionPrincipal1, AddElement {
+    @Override
     public void addElement(ActionEvent e){
         Button button = (Button) e.getTarget();
-        Object tfUnits = button.getParent().getChildrenUnmodifiable();
-        System.out.println(tfUnits.toString());
+        StartElementsOfController.firstStep(button);
     }
-
-    public void loadCar(Button button){
-
-    }
-
-
     public void watchCar(MouseEvent e) throws IOException{
         ChangeViewGeneral.watchCar(e);
     }
@@ -33,12 +27,7 @@ public class FloorHomeController implements BarCollectionPrincipal1, AddElement 
         ChangeViewGeneral.funny(e);
     }
 
-    public void relaxation(MouseEvent e) throws IOException{
-        ChangeViewGeneral.relaxation(e);
-    }
-
     public void goBack(MouseEvent e) throws IOException{
         ChangeViewGeneral.goBack(e);
     }
-
 }

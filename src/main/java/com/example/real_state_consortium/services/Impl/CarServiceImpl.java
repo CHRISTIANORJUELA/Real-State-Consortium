@@ -8,7 +8,6 @@ import java.util.ArrayList;
 public class CarServiceImpl implements CarService {
     ArrayList<Data3> listAllElementsCar = new ArrayList<>();
     ArrayList<ElementsOfView> elementsInTheView = new ArrayList<>();
-
     public ArrayList<Data3> getListAllElementsCar() {
         return listAllElementsCar;
     }

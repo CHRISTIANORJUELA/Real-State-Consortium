@@ -31,44 +31,8 @@ public class ModelFactoryController implements ModelFactoryService {
     }
 
     //****************************************************************************************//
-
-    public void searchSubString(String subString, TextArea textArea){
-        laboratory.getExercisesPracticeImpl().searchSubString(subString,textArea);
-    }
-
-    public void ChangeNameAtFruit(){
-        laboratory.getExercisesPracticeImpl().ChangeNameAtFruit();
-    }
-
-    public ArrayList<Name> returnArrayNames(){
-        return laboratory.getExercisesPracticeImpl().returnArrayNames();
-    }
-
-    public void sortNames(){
-        laboratory.getExercisesPracticeImpl().sortNames();
-    }
-
-    public List<Name> returnNameSort(){
-        return laboratory.getExercisesPracticeImpl().returnNameSort();
-    }
-
-    public void addHash(String key,String value){
-        laboratory.getExercisesPracticeImpl().addHash(key, value);
-    }
-
-    public void deleteHash(String key){
-        laboratory.getExercisesPracticeImpl().deleteHash(key);
-    }
-
-    public void printHash(){
-        laboratory.getExercisesPracticeImpl().printHash();
-    }
-
     //************************REAL STATE CONSORTIUM****************************************************************
 
-    public void addElementCar(Label lbUnits, Label lbDisponibility, TextField tfEnterStock, Label lbPrice, Label lbNameProduct){
-         laboratory.getPaintServiceImpl().addElementCar(lbUnits,lbDisponibility,tfEnterStock,lbPrice,lbNameProduct);
-    }
 
     public void addElementIncarr(ModelFactoryController mfc, Laboratory laboratorium, String btn , String lbUnits, String lbDisponibility, String tfEnterStock, String lbPrice, String lbNameProduct){
         laboratory.getAddAtCarImpl().addElementInCar(mfc, laboratorium, btn ,  lbUnits,  lbDisponibility,  tfEnterStock,  lbPrice,  lbNameProduct);
@@ -96,10 +60,6 @@ public class ModelFactoryController implements ModelFactoryService {
 
     public  void setNullStructureClassObject(){
         laboratory.getStructureServiceImpl().setNullStructureClassObject();
-    }
-
-    public void deleteStructureFalse(){
-        laboratory.getStructureServiceImpl().deleteStructureFalse();
     }
 
     public void loginAgent(String nameAgent,String passWordAgent,ArrayList<ValidateAgent> agents){
@@ -135,9 +95,6 @@ public class ModelFactoryController implements ModelFactoryService {
      return laboratory.getCarServiceImpl().getListAllElementsCar();
     }
 
-    public List<Structure> getStructures(){
-        return laboratory.getStructureServiceImpl().getStructures();
-    }
 
     public Structure getStructureClass(){
         return laboratory.getStructureServiceImpl().getStructureClass();

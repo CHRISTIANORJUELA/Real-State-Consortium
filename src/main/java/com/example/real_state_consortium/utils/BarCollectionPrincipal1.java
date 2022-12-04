@@ -7,7 +7,5 @@ import java.io.IOException;
 public interface BarCollectionPrincipal1 {
     void decorationHome(MouseEvent e) throws IOException;
     void funny(MouseEvent e) throws IOException;
-    void relaxation(MouseEvent e) throws IOException;
-
     void goBack(MouseEvent e) throws IOException;
 }

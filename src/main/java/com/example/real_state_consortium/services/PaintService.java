@@ -7,6 +7,6 @@ import javafx.scene.control.TextField;
 import java.util.ArrayList;
 
 public interface PaintService {
-    void addElementCar(Label lbUnits, Label lbDisponibility, TextField tfEnterStock, Label lbPrice, Label lbNameProduct);
+
     ArrayList<DataElements> initializeDataPaint();
 }

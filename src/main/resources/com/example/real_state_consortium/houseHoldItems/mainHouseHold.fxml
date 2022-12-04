@@ -4,19 +4,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="750.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.MainHouseHoldController">
+<AnchorPane prefHeight="750.0" prefWidth="880.0" styleClass="fatherBox" stylesheets="@../css/mainsBar.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_state_consortium.controllers.MainHouseHoldController">
    <children>
-      <Label layoutX="410.0" layoutY="267.0" onMouseClicked="#funny" text="Diversión">
+      <Label layoutX="390.0" layoutY="390.0" onMouseClicked="#funny" text="Diversión">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Label>
-      <Label layoutX="302.0" layoutY="101.0" onMouseClicked="#decorationHome" prefHeight="28.0" prefWidth="276.0" text="          Decoracion del Hogar">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font>
-      </Label>
-      <Label layoutX="407.0" layoutY="471.0" onMouseClicked="#relaxation" text="Relajación">
+      <Label layoutX="280.0" layoutY="212.0" onMouseClicked="#decorationHome" prefHeight="28.0" prefWidth="276.0" text="          Decoracion del Hogar">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>

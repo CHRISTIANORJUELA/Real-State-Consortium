@@ -15,6 +15,9 @@ public class AddAtCarImpl implements AddAtCarService {
     ArrayList<Data3> data3send;
     private  PaintServiceImpl paintService;
     private  ToiletServiceImpl toiletService;
+    private KitchenServiceImpl kitchenService;
+    private FloorServiceImpl floorService;
+    private GymServiceImpl gymService;
     private ArrayList<Data3> allElementsIncar;
 
     public AddAtCarImpl(){}
@@ -62,19 +65,21 @@ public class AddAtCarImpl implements AddAtCarService {
                     if (x.getNameElement().equalsIgnoreCase(d.getNameElement())){
                         x.setStockElement(d.getStockElement());
                         x.setValue(d.getValue());
-                        PrintMessage.printMessage("Atención"," Ha sido Agregado el elemento al Carrito");
                     }
                 });
             }else {
                 allElementsIncar.add(new Data3(d.getNameElement(),d.getStockElement(), d.getValue()));
+                PrintMessage.printMessage("Atención"," Ha sido Agregado el elemento al Carrito");
             }
-            allElementsIncar.forEach(x-> System.out.println("att at car "+x.getNameElement()+" valor : "+x.getValue()));
         }
 
     }
     public void initializeFirstsData(Laboratory laboratory, ModelFactoryController mfc){
         if (paintService==null){paintService = laboratory.getPaintServiceImpl();}
         if (toiletService==null){toiletService=laboratory.getToiletServiceImpl();}
+        if (kitchenService==null){kitchenService=laboratory.getKitchenServiceImpl();}
+        if (floorService==null){floorService=laboratory.getFloorServiceImpl();}
+        if (gymService==null){gymService=laboratory.getGymServiceImpl();}
         if(allElementsIncar==null){allElementsIncar=mfc.getListAllElementsCar();}
         if (data3 == null){data3 = new ArrayList<>();}
         if (dataElements == null){
@@ -83,7 +88,9 @@ public class AddAtCarImpl implements AddAtCarService {
            // dataElements.addAll(mfc.returnDataToilet());
             dataElements.addAll(paintService.initializeDataPaint());
             dataElements.addAll(toiletService.initializeDataToilet());
-
+            dataElements.addAll(kitchenService.initializeDataKitchen());
+            dataElements.addAll(floorService.initializeDataFloor());
+            dataElements.addAll(gymService.initializeDataGym());
         }
         if (data3send==null){data3send = new ArrayList<>();}
     }
