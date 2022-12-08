@@ -10,12 +10,10 @@ import javafx.scene.input.MouseEvent;
 import java.io.IOException;
 
 public class RegisterController {
-
     @FXML
     private TextField tfName;
     @FXML
     private TextField tfPassword;
-
     ModelFactoryController mfc = ModelFactoryController.getInstance();
 
     public void confirmRegister(ActionEvent e) throws IOException{
@@ -24,7 +22,7 @@ public class RegisterController {
           String passWordAgent = tfPassword.getText();
           if (mfc.registerAgent(nameAgent,passWordAgent)){
               ChangeViewParticular.enterAtLoginWithActioEvent(e);
-          };
+          }
       }
     }
 

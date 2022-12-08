@@ -14,8 +14,6 @@ import java.io.IOException;
 import java.net.URL;
 
 public class MainDecorationHomeController implements BarCollectionDecorationHome {
-
-
    public  void paintHome(MouseEvent e) throws IOException{
        ChangeViewParticular.paintHome(e);
     }

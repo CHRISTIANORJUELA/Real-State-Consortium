@@ -12,15 +12,12 @@ public class ValidateAgent {
     public String getNameAgent() {
         return nameAgent;
     }
-
     public void setNameAgent(String nameAgent) {
         this.nameAgent = nameAgent;
     }
-
     public String getCode() {
         return code;
     }
-
     public void setCode(String code) {
         this.code = code;
     }

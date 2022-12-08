@@ -1,16 +1,12 @@
 package com.example.real_state_consortium.services.Impl;
 
-import com.example.real_state_consortium.utils.Data3;
-import com.example.real_state_consortium.utils.DataElements;
+import com.example.real_state_consortium.models.DataElements;
 import com.example.real_state_consortium.services.PaintService;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+
 import java.util.ArrayList;
 
 public class PaintServiceImpl implements PaintService {
-
     ArrayList<DataElements> dataElementsPaint;
-
     public ArrayList<DataElements> initializeDataPaint(){
         if (dataElementsPaint == null){
             dataElementsPaint = new ArrayList<>();

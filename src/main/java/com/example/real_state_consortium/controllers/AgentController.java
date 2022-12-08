@@ -2,7 +2,6 @@ package com.example.real_state_consortium.controllers;
 
 import com.example.real_state_consortium.models.ValidateAgent;
 import com.example.real_state_consortium.utils.ChangeViewGeneral;
-import com.example.real_state_consortium.utils.ChangeViewParticular;
 import com.example.real_state_consortium.utils.UtilsMethods1;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,7 +13,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -27,14 +25,12 @@ public class AgentController implements Initializable {
     private TableColumn<String, ValidateAgent> clPassWordAgent;
     @FXML
     private TableView<ValidateAgent> tableAgents;
-
     @FXML
     private TextField tfSearch;
     @FXML
     private TextField tfNameAgent;
     @FXML
     private TextField tfPassWordAgent;
-
     @FXML
     private ObservableList<ValidateAgent> observableList;
 
@@ -52,12 +48,10 @@ public class AgentController implements Initializable {
       if (UtilsMethods1.validateIscampusStringIsTrue(tfNameAgent.getText()) && tfPassWordAgent.getText() != null){
           String name = tfNameAgent.getText();
           String passWord = tfPassWordAgent.getText();
-          mfc.addAgent(name,passWord);
+          mfc.addAgent(name,passWord,mfc.getAgents());
           refreshTableAgent();
       }
     }
-
-
 
     @FXML
     public void deleteAgent(MouseEvent event) {
@@ -68,7 +62,6 @@ public class AgentController implements Initializable {
            refreshTableAgent();
         }
     }
-
     public void select(MouseEvent e){
         ValidateAgent agentSelect = tableAgents.getSelectionModel().getSelectedItem();
         if (agentSelect != null){
@@ -76,9 +69,6 @@ public class AgentController implements Initializable {
             tfPassWordAgent.setText(agentSelect.getCode());
         }
     }
-
-
-
     @FXML
     public void modifyAgent(MouseEvent event) {
        ValidateAgent select = tableAgents.getSelectionModel().getSelectedItem();
@@ -89,7 +79,6 @@ public class AgentController implements Initializable {
            refreshTableAgent();
        }
     }
-
     @FXML
     public void searchAgents(KeyEvent event) {
        String name = tfSearch.getText();
@@ -100,9 +89,8 @@ public class AgentController implements Initializable {
            tableAgents.setItems(observableList);
        }
     }
-
     public void refreshTableAgent(){
-        ArrayList<ValidateAgent> agentsTb = mfc.returnAgentsIntable();
+        ArrayList<ValidateAgent> agentsTb = mfc.returnAgentsIntable(mfc.getAgents());
         if (agentsTb.size()>0){
             observableList = FXCollections.observableArrayList();
             observableList.setAll(agentsTb);
@@ -124,6 +112,4 @@ public class AgentController implements Initializable {
     public void goBack(MouseEvent e) throws IOException {
         ChangeViewGeneral.goBack(e);
     }
-
-
 }

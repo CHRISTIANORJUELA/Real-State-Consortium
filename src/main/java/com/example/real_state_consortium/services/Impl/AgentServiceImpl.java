@@ -3,16 +3,14 @@ package com.example.real_state_consortium.services.Impl;
 import com.example.real_state_consortium.models.ValidateAgent;
 import com.example.real_state_consortium.services.AgentService;
 import com.example.real_state_consortium.utils.PrintMessage;
-
 import java.util.ArrayList;
-import java.util.Optional;
 
 public class AgentServiceImpl implements AgentService {
     ArrayList<ValidateAgent> agentsInTable;
     ArrayList<ValidateAgent> agentsIntableFilter;
 
-    public void addAgent(String name,String passWord){
-        initializeAgentsIntable();
+    public void addAgent(String name,String passWord,ArrayList<ValidateAgent> list){
+        initializeAgentsIntable(list);
         boolean passToaddAgent = agentsInTable.stream().anyMatch(x->x.getNameAgent().equalsIgnoreCase(name) || x.getCode().equalsIgnoreCase(passWord));
         if (passToaddAgent){
             PrintMessage.printMessage("Lo sentimos","El nombre de usurio o la contraseña ya existen");
@@ -61,11 +59,9 @@ public class AgentServiceImpl implements AgentService {
         });
     }
 
-    public void initializeAgentsIntable(){
+    public void initializeAgentsIntable(ArrayList<ValidateAgent> list){
         if (agentsInTable == null){
-            agentsInTable = new ArrayList<>();
-            agentsInTable.add(new ValidateAgent("Manuela","984782"));
-            agentsInTable.add(new ValidateAgent("Maria","449424"));
+            agentsInTable = list;
         }
     }
 
@@ -75,8 +71,8 @@ public class AgentServiceImpl implements AgentService {
         }
     }
 
-    public ArrayList<ValidateAgent> returnAgentsIntable(){
-        initializeAgentsIntable();
+    public ArrayList<ValidateAgent> returnAgentsIntable(ArrayList<ValidateAgent> list){
+        initializeAgentsIntable(list);
         return agentsInTable;
     }
 

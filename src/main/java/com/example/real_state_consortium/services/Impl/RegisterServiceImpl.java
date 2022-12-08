@@ -24,7 +24,7 @@ public class RegisterServiceImpl implements RegisterService {
     public void initializeAgents(){
         if (agents == null){
             agents = new ArrayList<>();
-            agents.add(new ValidateAgent("Pablo","349240"));
+            agents.add(new ValidateAgent("Maria","349240"));
             agents.add(new ValidateAgent("Veronica","204024"));
         }
     }

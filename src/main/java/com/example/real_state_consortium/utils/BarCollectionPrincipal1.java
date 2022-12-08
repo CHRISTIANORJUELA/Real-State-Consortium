@@ -1,7 +1,6 @@
 package com.example.real_state_consortium.utils;
 
 import javafx.scene.input.MouseEvent;
-
 import java.io.IOException;
 
 public interface BarCollectionPrincipal1 {

@@ -5,7 +5,7 @@ import com.example.real_state_consortium.models.Receipt;
 import com.example.real_state_consortium.models.Structure;
 import com.example.real_state_consortium.models.ValidateAgent;
 import com.example.real_state_consortium.services.Impl.Laboratory;
-import com.example.real_state_consortium.utils.Data3;
+import com.example.real_state_consortium.models.Data3;
 import com.example.real_state_consortium.utils.ElementsOfView;
 import java.util.ArrayList;
 
@@ -14,8 +14,7 @@ public interface ModelFactoryService {
     void addElementIncarr(ModelFactoryController mfc,Laboratory laboratory,String btn , String lbUnits, String lbDisponibility, String tfEnterStock, String lbPrice, String lbNameProduct);
 
     void clearData();
-
-    void calculateStructure( ModelFactoryController mfc,float metersBackground,float meterFront,int floors,int extract,String stucture);
+    void calculateStructure( ModelFactoryController mfc,double metersBackground,double meterFront,int floors,int extract,String stucture);
 
     void setNullStructureClassObject();
 
@@ -25,7 +24,7 @@ public interface ModelFactoryService {
 
     boolean getPassLogin();
 
-    void addAgent(String name,String passWord);
+    void addAgent(String name,String passWord,ArrayList<ValidateAgent> list);
 
     void deleteAgentInTable(ValidateAgent agentSelect);
 
@@ -43,7 +42,7 @@ public interface ModelFactoryService {
 
     ArrayList<Data3> getListAllElementsCar();
 
-    ArrayList<ValidateAgent> returnAgentsIntable();
+    ArrayList<ValidateAgent> returnAgentsIntable(ArrayList<ValidateAgent> list);
 
     ArrayList<Receipt> getReceiptFinal();
 }

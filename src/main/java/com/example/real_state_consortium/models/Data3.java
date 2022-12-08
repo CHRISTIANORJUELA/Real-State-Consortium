@@ -1,4 +1,4 @@
-package com.example.real_state_consortium.utils;
+package com.example.real_state_consortium.models;
 
 public class Data3 {
     private String nameElement;
@@ -14,19 +14,15 @@ public class Data3 {
     public String getNameElement() {
         return nameElement;
     }
-
     public void setNameElement(String nameElement) {
         this.nameElement = nameElement;
     }
-
     public int getStockElement() {
         return stockElement;
     }
-
     public void setStockElement(int stockElement) {
         this.stockElement = stockElement;
     }
-
     public double getValue() {
         return value;
     }

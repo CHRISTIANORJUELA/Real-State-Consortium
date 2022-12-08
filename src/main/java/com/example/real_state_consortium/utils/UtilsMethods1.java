@@ -1,6 +1,7 @@
 package com.example.real_state_consortium.utils;
 
-import com.example.real_state_consortium.controllers.ModelFactoryController;
+import com.example.real_state_consortium.exeptions.InformationIsWrong;
+import com.example.real_state_consortium.models.Data3;
 import com.example.real_state_consortium.models.Structure;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -15,7 +16,24 @@ public class UtilsMethods1 {
         if ((StringtfEnterStock != null) && (StringtfEnterStock.matches("[0-9]+"))){
             return true;
         }else{
-            PrintMessage.printMessage("Por Favor","Llena los campos correspondientes  , con datos Correctos solo (numeros)");
+            try {
+                throw new InformationIsWrong(" Llena los campos correspondientes ,con datos Correctos solo (numeros) no permitido decimales");
+            }catch (InformationIsWrong e){
+                PrintMessage.printMessage("Recuerda",e.getMessage());
+            }
+        }
+        return false;
+    }
+
+    public static boolean validateIsCampusDecimalIstrue(String stringEnter) {
+        if ((stringEnter != null) && (stringEnter.matches("^[0-9]+([.][0-9]+)?$"))){
+            return true;
+        }else{
+            try {
+                throw new InformationIsWrong(" llenar los datos correspondiente con numeros");
+            }catch (InformationIsWrong e){
+              PrintMessage.printMessageWarning("Recuerda",e.getMessage());
+            }
         }
         return false;
     }
@@ -44,7 +62,7 @@ public class UtilsMethods1 {
         return false;
     }
 
-    public static void validateElementsView(ArrayList<ElementsOfView> elementsInView ,Button button, Label lbUnits, Label lbDisponibility, TextField tfEnterStock, Label lbPrice, Label lbNameProduct){
+    public static void validateElementsView(ArrayList<ElementsOfView> elementsInView , Button button, Label lbUnits, Label lbDisponibility, TextField tfEnterStock, Label lbPrice, Label lbNameProduct){
         boolean passOfView = elementsInView.stream().anyMatch(x-> x.getNameView().equals(lbNameProduct));
         if (passOfView){
             elementsInView.forEach(x->{

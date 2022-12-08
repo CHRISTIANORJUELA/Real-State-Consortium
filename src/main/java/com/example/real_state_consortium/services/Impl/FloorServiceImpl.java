@@ -1,7 +1,7 @@
 package com.example.real_state_consortium.services.Impl;
 
 import com.example.real_state_consortium.services.FloorService;
-import com.example.real_state_consortium.utils.DataElements;
+import com.example.real_state_consortium.models.DataElements;
 
 import java.util.ArrayList;
 

@@ -12,3 +12,11 @@
 -fx-border-radius:10px;
 -fx-effect: dropshadow( three-pass-box,black,20px,0px,0px,0px);
 }
+
+.btn{
+ -fx-background-color:#e3b719;
+}
+
+.btn:hover{
+-fx-background-color:#efc11a;
+}

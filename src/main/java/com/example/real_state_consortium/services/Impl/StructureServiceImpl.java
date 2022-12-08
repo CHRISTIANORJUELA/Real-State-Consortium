@@ -4,24 +4,21 @@ import com.example.real_state_consortium.controllers.ModelFactoryController;
 import com.example.real_state_consortium.models.Structure;
 import com.example.real_state_consortium.services.StructureService;
 import com.example.real_state_consortium.utils.TypeStructure;
-import java.util.ArrayList;
-import java.util.List;
 public class StructureServiceImpl implements StructureService {
-   private final short pricePerMeter = 10000;
-   private final int pricePerFloor = 2250000;
-   private final int pricePerExtract = 100000;
-   private float totalPriceOfStructure = 0;
+   private final int pricePerMeter = 100000;
+   private final int pricePerFloor = 300000;
+   private final int pricePerExtract = 200000;
+   private double totalPriceOfStructure = 0;
    private Structure structureClass;
-
-   public void calculateStructure(ModelFactoryController mfc, float metersBackground, float meterFront, int floors, int extract, String stucture){
+   public void calculateStructure(ModelFactoryController mfc, double metersBackground, double meterFront, int floors, int extract, String stucture){
       if (structureClass==null){structureClass = new Structure();}
       if (structureClass.getTypeStructure()!=null){structureClass=null;}
       if (structureClass==null){new Structure();}
-      float totalPriceExtract =extract*pricePerExtract;
-      float metersSquare = (metersBackground*meterFront);
-      float totalPriceMeter2 = metersSquare*pricePerMeter;
-      float totalPriceFloor = floors*pricePerFloor;
-      float totalPriceTypeStructure = 0;
+      double totalPriceExtract =extract*pricePerExtract;
+      double metersSquare = (metersBackground*meterFront);
+      double totalPriceMeter2 = metersSquare*pricePerMeter;
+      double totalPriceFloor = floors*pricePerFloor;
+      double totalPriceTypeStructure = 0;
       switch (stucture){
          case "Edificio":totalPriceTypeStructure = TypeStructure.BUILDING.getPriceStructure();break;
          case "Mansión": totalPriceTypeStructure = TypeStructure.MANSION.getPriceStructure();break;

@@ -13,41 +13,29 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import java.io.IOException;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class StructureController implements Initializable {
-
-
     @FXML
     private ChoiceBox<Integer> chFloors = new ChoiceBox<>();
-
     @FXML
     private ChoiceBox<Integer> chExtract;
-
     @FXML
     private ChoiceBox<String> chStructure;
-
     @FXML
     private TextArea textArea;
-
     @FXML
     private TextField tfMetersBackground;
-
     @FXML
     private TextField tfMetersFront;
-
-
     private ArrayList<Integer> numsChFloors = new ArrayList<>();
-
-
     private ArrayList<String> nameStructures = new ArrayList<>(List.of(new String[]{"Mansión", "Edificio", "Casa"}));
-
     private ArrayList<Integer> extractStructure = new ArrayList<>();
-
     private Structure structureClass = new Structure();
-
     ModelFactoryController mfc = ModelFactoryController.getInstance();
 
     @Override
@@ -59,12 +47,11 @@ public class StructureController implements Initializable {
         chExtract.getItems().setAll(extractStructure);
     }
 
-
     public void calculateItems(ActionEvent e){
         if (tfMetersBackground.getText() != null && tfMetersFront.getText() != null && chFloors.getValue() != null && chExtract.getValue() != null && chStructure.getValue() != null){
-            if (UtilsMethods1.validateIscampusNumberIsTrue(tfMetersBackground.getText()) && UtilsMethods1.validateIscampusNumberIsTrue(tfMetersFront.getText())){
-                int metersBackground = Integer.parseInt(tfMetersBackground.getText());
-                int meterFront = Integer.parseInt(tfMetersFront.getText());
+            if (UtilsMethods1.validateIsCampusDecimalIstrue(tfMetersBackground.getText()) && UtilsMethods1.validateIsCampusDecimalIstrue(tfMetersFront.getText())){
+                double metersBackground = Double.parseDouble(tfMetersBackground.getText());
+                double meterFront = Double.parseDouble(tfMetersFront.getText());
                 int floors = chFloors.getValue();
                 int extract = chExtract.getValue();
                 String stucture = chStructure.getValue();
@@ -74,6 +61,8 @@ public class StructureController implements Initializable {
         }
     }
     public void printInTextArea(){
+        Locale.setDefault(Locale.US);
+        DecimalFormat decimalFormat = new DecimalFormat("#,###.00");
         textArea.setText("");
         this.structureClass = mfc.getStructureClass();
         String message = "Tipo de estructura : "+structureClass.getTypeStructure()+"\n"+
@@ -81,9 +70,9 @@ public class StructureController implements Initializable {
                 "Metros de Frente : "+structureClass.getFront()+"\n"+
                 "Metros de Fondo : "+structureClass.getBackground()+"\n"+
                 "Extracto de la/el: "+structureClass.getTypeStructure()+" "+structureClass.getExtractStructure()+"\n"+
-                "Metros cuadrados de la edificacíon : "+structureClass.getSquareMeters()+"\n"+
-                "Precio por metro cuadrado : "+structureClass.getPricePerMeter2()+"\n"+
-                "Valor a Pagar :  "+structureClass.getTotalPriceOfStructure();
+                "Metros cuadrados de la edificacíon : "+decimalFormat.format(structureClass.getSquareMeters())+"\n"+
+                "Precio por metro cuadrado : "+decimalFormat.format(structureClass.getPricePerMeter2())+"\n"+
+                "Valor a Pagar :  "+decimalFormat.format(structureClass.getTotalPriceOfStructure());
         textArea.setWrapText(true);
         textArea.setText(message);
     }
