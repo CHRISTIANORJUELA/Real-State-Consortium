@@ -21,8 +21,8 @@ public class AddAtCarImpl implements AddAtCarService {
     private ArrayList<Data3> allElementsIncar;
 
     public AddAtCarImpl(){}
-    public void addElementInCar(ModelFactoryController mfc,Laboratory laboratory,String idBtn,String units,String disponibility,String stockEnter,String priceElement,String nameProduct){
-            initializeForRun(laboratory,mfc); // Inicializo dataElements con los datos de cada vista del catalogo  nombre, cantidad, precio, disponiblidad
+    public void addElementInCar(ModelFactoryController mfc, Instances instances, String idBtn, String units, String disponibility, String stockEnter, String priceElement, String nameProduct){
+            initializeForRun(instances,mfc); // Inicializo dataElements con los datos de cada vista del catalogo  nombre, cantidad, precio, disponiblidad
             int stock = Integer.parseInt(stockEnter);  // parseo la cantidad que se ingreso en la vista
             float price = Float.parseFloat(priceElement);  // parseo el precio que aparece en la vista
             data3.add(new Data3(nameProduct,stock,price));  // A esta lista introduzco el nombre la cantidad y el precio
@@ -32,7 +32,7 @@ public class AddAtCarImpl implements AddAtCarService {
                 double stockPush = calculateStockPush((String) map.getKey(),(double) map.getValue()); // calculo la cantidad de unidades por cada elemento en el mapa
                 setData3Send((String) map.getKey(),(double) map.getValue(), stockPush); // le envio a setData3Send el nombre del producto , valor a pagar, cantidad de unidades
             }
-            checkElementsExistsInArrayCar(data3send);  // agre
+            checkElementsExistsInArrayCar(data3send);  // agregro los elementos a la lista del carrito
             map1.clear();
     }
 
@@ -75,12 +75,12 @@ public class AddAtCarImpl implements AddAtCarService {
         }
 
     }
-    public void initializeForRun(Laboratory laboratory, ModelFactoryController mfc){
-        if (paintService==null){paintService = laboratory.getPaintServiceImpl();}  // inicializo todas las instancias del catalogo
-        if (toiletService==null){toiletService=laboratory.getToiletServiceImpl();}  // para que pueda funcionar correctamente el programa
-        if (kitchenService==null){kitchenService=laboratory.getKitchenServiceImpl();}
-        if (floorService==null){floorService=laboratory.getFloorServiceImpl();}
-        if (gymService==null){gymService=laboratory.getGymServiceImpl();}
+    public void initializeForRun(Instances instances, ModelFactoryController mfc){
+        if (paintService==null){paintService = instances.getPaintServiceImpl();}  // inicializo todas las instancias del catalogo
+        if (toiletService==null){toiletService=instances.getToiletServiceImpl();}  // para que pueda funcionar correctamente el programa
+        if (kitchenService==null){kitchenService=instances.getKitchenServiceImpl();}
+        if (floorService==null){floorService=instances.getFloorServiceImpl();}
+        if (gymService==null){gymService=instances.getGymServiceImpl();}
         if(allElementsIncar==null){allElementsIncar=mfc.getListAllElementsCar();}
         if (data3 == null){data3 = new ArrayList<>();}
         if (dataElements == null){

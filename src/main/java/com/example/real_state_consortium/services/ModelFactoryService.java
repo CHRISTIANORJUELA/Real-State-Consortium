@@ -4,14 +4,14 @@ import com.example.real_state_consortium.controllers.ModelFactoryController;
 import com.example.real_state_consortium.models.Receipt;
 import com.example.real_state_consortium.models.Structure;
 import com.example.real_state_consortium.models.ValidateAgent;
-import com.example.real_state_consortium.services.Impl.Laboratory;
+import com.example.real_state_consortium.services.Impl.Instances;
 import com.example.real_state_consortium.models.Data3;
 import com.example.real_state_consortium.utils.ElementsOfView;
 import java.util.ArrayList;
 
 public interface ModelFactoryService {
 
-    void addElementIncarr(ModelFactoryController mfc,Laboratory laboratory,String btn , String lbUnits, String lbDisponibility, String tfEnterStock, String lbPrice, String lbNameProduct);
+    void addElementIncarr(ModelFactoryController mfc, Instances instances, String btn , String lbUnits, String lbDisponibility, String tfEnterStock, String lbPrice, String lbNameProduct);
 
     void clearData();
     void calculateStructure( ModelFactoryController mfc,double metersBackground,double meterFront,int floors,int extract,String stucture);

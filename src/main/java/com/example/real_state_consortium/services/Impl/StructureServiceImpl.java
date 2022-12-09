@@ -5,12 +5,13 @@ import com.example.real_state_consortium.models.Structure;
 import com.example.real_state_consortium.services.StructureService;
 import com.example.real_state_consortium.utils.TypeStructure;
 public class StructureServiceImpl implements StructureService {
-   private final int pricePerMeter = 150000;
-   private final int pricePerFloor = 300000;
-   private final int pricePerExtract = 200000;
+   private final int pricePerMeter = 1500000;
+   private final int pricePerFloor = 3000000;
+   private final int pricePerExtract = 5000000;
    private double totalPriceOfStructure = 0;
    private Structure structureClass;
    public void calculateStructure(ModelFactoryController mfc, double metersBackground, double meterFront, int floors, int extract, String stucture){
+      totalPriceOfStructure = 0;
       if (structureClass==null){structureClass = new Structure();}
       if (structureClass.getTypeStructure()!=null){structureClass=null;}
       if (structureClass==null){new Structure();}

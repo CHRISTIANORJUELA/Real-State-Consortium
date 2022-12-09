@@ -1,6 +1,6 @@
 package com.example.real_state_consortium.services.Impl;
 
-public class Laboratory {
+public class Instances {
     private PaintServiceImpl paintServiceImpl;
     private KitchenServiceImpl kitchenServiceImpl;
     private FloorServiceImpl floorServiceImpl;
@@ -15,7 +15,7 @@ public class Laboratory {
 
     private RegisterServiceImpl registerServiceImpl;
 
-    public Laboratory(){
+    public Instances(){
         paintServiceImpl = new PaintServiceImpl();
         kitchenServiceImpl = new KitchenServiceImpl();
         floorServiceImpl = new FloorServiceImpl();

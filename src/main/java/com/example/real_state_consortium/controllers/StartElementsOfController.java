@@ -1,6 +1,6 @@
 package com.example.real_state_consortium.controllers;
 
-import com.example.real_state_consortium.services.Impl.Laboratory;
+import com.example.real_state_consortium.services.Impl.Instances;
 import com.example.real_state_consortium.utils.ElementsOfView;
 import com.example.real_state_consortium.utils.ExtractNodes;
 import com.example.real_state_consortium.utils.UtilsMethods1;
@@ -19,7 +19,7 @@ public class StartElementsOfController {
     static Label lbNameProduct;
 
     public static ModelFactoryController mfc = ModelFactoryController.getInstance();
-    public static Laboratory laboratory = new Laboratory();
+    public static Instances instances = new Instances();
     public static void firstStep(Button button){
         loadInformationOfView(button);
         if (UtilsMethods1.validateIscampusNumberIsTrue(tfEnterStock.getText())){
@@ -32,7 +32,7 @@ public class StartElementsOfController {
             if (UtilsMethods1.validateSecondEnter(units,disponibility,stockEnter)){
                 ArrayList<ElementsOfView> elementsOfViews = mfc.getElementsInTheView();
                 UtilsMethods1.validateElementsView(elementsOfViews,button,lbUnits,lbDisponibility,tfEnterStock,lbPrice,lbNameProduct);
-                mfc.addElementIncarr(mfc,laboratory,idBtn,units,disponibility,stockEnter,price,nameProduct);
+                mfc.addElementIncarr(mfc,instances,idBtn,units,disponibility,stockEnter,price,nameProduct);
             }
     }
 }
