@@ -111,9 +111,6 @@ public class FinallySellController implements Initializable {
 
     public void uploadCar(ArrayList<Data3> allElementsInCar, ArrayList<ElementsOfView> elementsIntheViewCar){
         int stock;
-        System.out.println("Antes : ");
-        allElementsInCar.forEach(x-> System.out.println("cantidad : "+x.getStockElement()+" valor "+x.getValue()));
-        elementsIntheViewCar.forEach(x-> System.out.println(" Nombre : "+x.getNameView().getText()+" cantidad : "+x.getStockInView().getText()+" valor : "+x.getPriceIntheView().getText()));
         for (Data3 a :allElementsInCar){                                               // Recorro los elementos del Carrito y tambiem la lista que
             for (ElementsOfView e : elementsIntheViewCar){                             // contiene la informacion de los elementos que han sido agregados al Carrito
                 if (a.getNameElement().equalsIgnoreCase(e.getNameView().getText())){   // Hago esto para actualizar las unidades de las vistas
@@ -131,9 +128,6 @@ public class FinallySellController implements Initializable {
                 }
             }
         }
-        System.out.println("Despues : ");
-        allElementsInCar.forEach(x-> System.out.println("cantidad : "+x.getStockElement()+" valor "+x.getValue()));
-        elementsIntheViewCar.forEach(x-> System.out.println(" Nombre : "+x.getNameView().getText()+" cantidad : "+x.getStockInView().getText()+" valor : "+x.getPriceIntheView().getText()));
     }
 
     public boolean checkAnswerIsTrue(Structure structure, ArrayList<Data3> allElementsInCar){

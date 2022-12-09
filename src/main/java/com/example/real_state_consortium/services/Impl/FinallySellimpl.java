@@ -25,15 +25,18 @@ public class FinallySellimpl implements FinallySellService {
         double sumOfValuePriceCar;                                                           // Mientras el programa sigue corriendo
         double sumValueOfStructure;
         if (allElementsInCar.size() > 0 && structure != null && structure.getTypeStructure() != null) { // Valido si hay una estructura y tambiem elementos en carrito para obtener el monto total de la compra
+            amount = 0;
             sumOfValuePriceCar = allElementsInCar.stream().map(x -> new Value(x.getValue())).collect(Collectors.summingDouble(Value::getValue));
             sumValueOfStructure = structure.getTotalPriceOfStructure();
             amount += sumOfValuePriceCar + sumValueOfStructure;
             receipt.add(new Receipt(nameAgent, nameClient, (ArrayList<Data3>) allElementsInCar.clone(), structure, amount, LocalDate.now(), true));
         } else if (allElementsInCar.size() > 0) {   // Valido si solo hay elementos en el carrito para obtener el monto total de la compra
+            amount = 0;
             sumOfValuePriceCar = allElementsInCar.stream().map(x -> new Value(x.getValue())).collect(Collectors.summingDouble(Value::getValue));
             amount += sumOfValuePriceCar;
             receipt.add(new Receipt(nameAgent, nameClient, (ArrayList<Data3>) allElementsInCar.clone(), amount, LocalDate.now(), true));
         } else if (structure.getTypeStructure() != null) {  // Valido si solo hay una estructur para obtener el monto total de la compra
+            amount = 0;
             sumValueOfStructure = structure.getTotalPriceOfStructure();
             amount += sumValueOfStructure;
             receipt.add(new Receipt(nameAgent, nameClient, structure, amount, LocalDate.now(), true));

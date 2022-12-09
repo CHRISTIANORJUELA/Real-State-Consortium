@@ -47,8 +47,10 @@ public class Persistence {
             FileReader fileReader = new FileReader(pathOfTxt);
             BufferedReader bfr = new BufferedReader(fileReader);
             String line = "";
+            int cont = 0;
             while ((line = bfr.readLine())!= null) {
-                content.add(line);
+                content.add(cont,line);
+                cont++;
             }
             bfr.close();
             fileReader.close();

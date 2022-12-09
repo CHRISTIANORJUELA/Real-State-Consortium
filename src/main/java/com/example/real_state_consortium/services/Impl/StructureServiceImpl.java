@@ -5,7 +5,7 @@ import com.example.real_state_consortium.models.Structure;
 import com.example.real_state_consortium.services.StructureService;
 import com.example.real_state_consortium.utils.TypeStructure;
 public class StructureServiceImpl implements StructureService {
-   private final int pricePerMeter = 100000;
+   private final int pricePerMeter = 150000;
    private final int pricePerFloor = 300000;
    private final int pricePerExtract = 200000;
    private double totalPriceOfStructure = 0;
